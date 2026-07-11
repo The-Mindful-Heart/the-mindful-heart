@@ -1,0 +1,15 @@
+{
+  "title": "Blogs & Resources",
+  "description": "Psychoeducational articles and resources from The Mindful Heart team. Add HTML or PDF files to the blogs folder and list them here.",
+  "posts": [
+    {
+      "id": "understanding-anxiety",
+      "title": "Understanding Anxiety: A Gentle Guide",
+      "summary": "What anxiety is, how it shows up in the body, and practical ways to begin working with it.",
+      "date": "2026-04-15",
+      "author": "The Mindful Heart Team",
+      "file": "/blogs/understanding-anxiety.html",
+      "type": "html"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply m-0 bg-brand-offwhite font-body text-slate-700 antialiased;
+}
+
+* {
+  @apply box-border;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-10;
+}
+
+.soft-panel {
+  @apply rounded-3xl border border-slate-200/60 bg-white/85 shadow-boutique backdrop-blur-sm;
+}
+
+.cta-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-brand-sky px-6 py-3 text-sm font-semibold text-slate-900 transition hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-brand-mint focus:ring-offset-2;
+}
+
+.cta-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-brand-mint bg-brand-mint/25 px-6 py-3 text-sm font-semibold text-slate-800 transition hover:bg-brand-mint/40 focus:outline-none focus:ring-2 focus:ring-brand-sky focus:ring-offset-2;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-8 {
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.brand-wordmark {
+  font-family: "Baloo 2", "Quicksand", "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.brand-wordmark-gradient {
+  background: linear-gradient(90deg, #49b9ff 0%, #66ccff 45%, #57e7a5 75%, #44d97a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.video-reel-track {
+  scrollbar-width: thin;
+  scrollbar-color: #66ccff transparent;
+}
+
+.video-reel-track::-webkit-scrollbar {
+  height: 6px;
+}
+
+.video-reel-track::-webkit-scrollbar-thumb {
+  background: #66ccff;
+  border-radius: 999px;
+}
+
+.service-card-hover {
+  backdrop-filter: blur(2px);
+}

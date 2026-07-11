@@ -1,0 +1,48 @@
+{
+  "title": "Important Notice",
+  "message": "This website and our therapy services are not intended for emergencies. If you or someone you know is in immediate danger or experiencing a mental health crisis, please contact emergency services or a crisis helpline right away.",
+  "emergencyContacts": [
+    {
+      "name": "National Tele MANAS Helpline",
+      "number": "14416 / 1-800-891-4416",
+      "region": "India",
+      "description": "24/7 national mental health helpline"
+    },
+    {
+      "name": "KIRAN Mental Health Helpline",
+      "number": "1800-599-0019",
+      "region": "India",
+      "description": "24/7 toll-free mental health support"
+    },
+    {
+      "name": "iCall Psychosocial Helpline",
+      "number": "+91-9152987821",
+      "region": "India",
+      "description": "Mon–Sat, 8 AM – 10 PM"
+    },
+    {
+      "name": "Vandrevala Foundation",
+      "number": "1860-2662-345 / 1800-2333-330",
+      "region": "India",
+      "description": "24/7 mental health crisis support"
+    },
+    {
+      "name": "TN State Mental Health Helpline",
+      "number": "104",
+      "region": "Tamil Nadu",
+      "description": "State health helpline"
+    },
+    {
+      "name": "TN Police Emergency",
+      "number": "100",
+      "region": "Tamil Nadu",
+      "description": "Police emergency"
+    },
+    {
+      "name": "TN Ambulance",
+      "number": "108",
+      "region": "Tamil Nadu",
+      "description": "Emergency ambulance services"
+    }
+  ]
+}

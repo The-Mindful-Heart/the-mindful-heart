@@ -1,0 +1,76 @@
+{
+  "brand": {
+    "name": "The Mindful Heart",
+    "tagline": "The Mindful Heart",
+    "logo": "/images/logo.png"
+  },
+  "hero": {
+    "badge": "The Mindful Heart",
+    "title": "Clinical psychology",
+    "titleAccent": "with depth, warmth, and dignity.",
+    "description": "When life feels heavy, confusing, or lonely, therapy can become a steady place to breathe, reflect, and begin again. At The Mindful Heart, we walk alongside adolescents and adults with compassionate, inclusive, and clinically grounded care that helps you reconnect with safety, meaning, and emotional balance.",
+    "backgroundImage": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=2000&q=80&fm=webp",
+    "primaryCta": {
+      "label": "Book an Appointment",
+      "href": "#book"
+    },
+    "secondaryCta": {
+      "label": "Explore Our Approach",
+      "href": "#about"
+    }
+  },
+  "quote": {
+    "text": "The curious paradox is that when I accept myself just as I am, then I can change.",
+    "author": "Carl Rogers"
+  },
+  "about": {
+    "label": "About Us",
+    "title": "A mindcare space rooted in compassion, insight, and dignity.",
+    "paragraphs": [
+      "The Mindful Heart is a psychotherapy practice committed to making mental health support accessible, humane, and deeply respectful of each person's story. We work with adolescents and adults through relational, trauma-informed, and evidence-based care.",
+      "Our approach reflects a blend of clinical depth and human warmth. We focus not only on symptoms, but also on the lived context behind them — relationships, life transitions, identity, grief, and the courage required to heal.",
+      "We believe therapy is a collaborative journey where people can feel seen without judgment and supported toward meaningful change."
+    ]
+  },
+  "impactStats": [
+    { "value": "1:1 Care", "label": "Personalized therapy pathways" },
+    { "value": "Inclusive", "label": "Affirmative and stigma-free practice" },
+    { "value": "Humanistic", "label": "Relational, insight-oriented support" },
+    { "value": "Evidence-led", "label": "Clinical integrity with lived empathy" }
+  ],
+  "goals": {
+    "title": "Our Goals",
+    "description": "Inspired by community-centered mental health spaces, our work bridges individual therapy and collective wellbeing.",
+    "items": [
+      "Make quality psychotherapy more approachable and emotionally safe.",
+      "Build a mental-health-friendly community through workshops and outreach.",
+      "Offer care that is inclusive, non-judgmental, and context-sensitive.",
+      "Support long-term healing, not just short-term symptom relief."
+    ]
+  },
+  "services": {
+    "title": "Our Work",
+    "description": "Therapy, psychoeducation, and wellbeing work designed to support individual healing and community mental health."
+  },
+  "team": {
+    "title": "Meet the Team",
+    "description": "Trained therapists who combine clinical expertise with a relational and inclusive approach to care."
+  },
+  "booking": {
+    "title": "Begin With a Gentle First Step",
+    "description": "If you are ready to start therapy, fill out the form below. We will help you find the right clinician and approach for your needs.",
+    "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfy880K6_A2EEDfqtmu76OVan7MH480N6PafhUTChKfcnkY0A/viewform?embedded=true",
+    "formHeight": 900,
+    "email": "mindfulheartchennai@gmail.com",
+    "emailLabel": "Email Us"
+  },
+  "navigation": [
+    { "label": "About", "href": "#about" },
+    { "label": "Services", "href": "#services" },
+    { "label": "Videos", "href": "#videos" },
+    { "label": "Events", "href": "#events" },
+    { "label": "Blogs", "href": "#blogs" },
+    { "label": "Psychologists", "href": "#team" },
+    { "label": "Connect on Instagram", "href": "https://www.instagram.com/the_mindfulheart/", "external": true, "icon": "instagram" }
+  ]
+}

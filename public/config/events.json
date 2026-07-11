@@ -1,0 +1,69 @@
+{
+  "title": "Events & Workshops",
+  "description": "Community spaces, workshops, and experiential sessions designed for emotional learning and connection.",
+  "ongoingLabel": "Upcoming",
+  "completedLabel": "Past Events",
+  "ongoing": [
+    {
+      "id": "tmh-internship-01",
+      "title": "Internship Program — Deeper Dive",
+      "date": "2027-06-01",
+      "time": "1:00 PM - 4:00 PM IST",
+      "mode": "In Person",
+      "location": "Arumbakkam, Chennai",
+      "description": "Based on the multiple requests for more details, here is a deeper dive into our internship program! The internship runs Monday to Friday, 1pm - 4pm at our organization's space in Arumbakkam, Chennai. Students who are full-time scholars pursuing UG/PG in psychology and related fields of humanities, as well as recent graduates, are eligible to apply. The fee range varies based on the year and level of graduation — group discounts are also available!",
+      "template": "media",
+      "image": "https://scontent.cdninstagram.com/v/t51.71878-15/704751835_1293094249663679_170964057753022298_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=9B-hgmwYj7MQ7kNvwEkaweN&_nc_oc=Adp6hEs2rORBA5-0UCovvLt5MX5RwWPjIiyY02vaDo4FXNbNRjGzr6UoCYuFXQ7cgso&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=N5M3royZyDMc5uSFBMPzjA&_nc_ss=7fa02&oh=00_AQDmoOZWo77y8VhtwEFwELy-xDPo1XhL2vJa0uOFbHCQYw&oe=6A581939",
+      "videos": [
+        {
+          "title": "Internship Program Details",
+          "url": "https://www.instagram.com/reel/DYrpiVcygWt/",
+          "thumbnail": "https://scontent.cdninstagram.com/v/t51.82787-15/731735669_17894893827530347_4121451726628778773_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=9B-hgmwYj7MQ7kNvwEkaweN&_nc_oc=Adp6hEs2rORBA5-0UCovvLt5MX5RwWPjIiyY02vaDo4FXNbNRjGzr6UoCYuFXQ7cgso&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=N5M3royZyDMc5uSFBMPzjA&_nc_ss=7fa02&oh=00_AQBbVdA211p1d5rLn6HZoFBDnljFyzW7FoSOab7o9nUzoA&oe=6A583F2D"
+        }
+      ],
+      "ctaLabel": "DM for Registration",
+      "ctaUrl": "https://www.instagram.com/the_mindfulheart/"
+    },
+    {
+      "id": "tmh-therapists-talk",
+      "title": "Therapists Talk — A Safe Space For and By Therapists",
+      "date": "2026-12-12",
+      "time": "2:30 PM - 4:30 PM IST",
+      "mode": "Online",
+      "location": "Zoom",
+      "description": "A safe space for and by therapists. Join us every 2nd and 4th Saturday from 2:30-4:30pm online, and bring in everything and anything related to your therapy experience! Take the first two Saturdays to figure if the space is for you, and then we'll discuss a payment plan.",
+      "template": "media",
+      "image": "https://scontent.cdninstagram.com/v/t51.82787-15/731735669_17894893827530347_4121451726628778773_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=9B-hgmwYj7MQ7kNvwEkaweN&_nc_oc=Adp6hEs2rORBA5-0UCovvLt5MX5RwWPjIiyY02vaDo4FXNbNRjGzr6UoCYuFXQ7cgso&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=N5M3royZyDMc5uSFBMPzjA&_nc_ss=7fa02&oh=00_AQBbVdA211p1d5rLn6HZoFBDnljFyzW7FoSOab7o9nUzoA&oe=6A583F2D",
+      "videos": [
+        {
+          "title": "Therapists Talk",
+          "url": "https://www.instagram.com/reel/DaAn4WTp0u2/",
+          "thumbnail": "https://scontent.cdninstagram.com/v/t51.82787-15/731735669_17894893827530347_4121451726628778773_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=9B-hgmwYj7MQ7kNvwEkaweN&_nc_oc=Adp6hEs2rORBA5-0UCovvLt5MX5RwWPjIiyY02vaDo4FXNbNRjGzr6UoCYuFXQ7cgso&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=N5M3royZyDMc5uSFBMPzjA&_nc_ss=7fa02&oh=00_AQBbVdA211p1d5rLn6HZoFBDnljFyzW7FoSOab7o9nUzoA&oe=6A583F2D"
+        }
+      ],
+      "ctaLabel": "DM for Link",
+      "ctaUrl": "https://www.instagram.com/the_mindfulheart/"
+    }
+  ],
+  "completed": [
+    {
+      "id": "tmh-past-04",
+      "title": "Me, My (vulnerable)self and I",
+      "date": "2025-04-06",
+      "time": "10:00 AM IST",
+      "mode": "In Person",
+      "location": "Chennai",
+      "description": "Me, My (vulnerable)self and I was a pure success. Our workshop was full of insights and allowed ourselves to embrace our vulnerable selves. Facilitated by Srinidhi Vasudevan and Preethi, the session created a safe space for participants to explore their vulnerability as a source of strength and self-awareness.",
+      "template": "featured",
+      "image": "",
+      "videos": [
+        {
+          "title": "Workshop Recap",
+          "url": "https://www.instagram.com/reel/DMF4LslSW8i/"
+        }
+      ],
+      "ctaLabel": "",
+      "ctaUrl": ""
+    }
+  ]
+}
