@@ -209,7 +209,7 @@ function App() {
               ) : null}
             </div>
           </div>
-          <div className="grid gap-5 md:grid-cols-2">
+          <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {(team.data ?? []).map((member) => (
               <BioCard key={member.name} member={member} />
             ))}

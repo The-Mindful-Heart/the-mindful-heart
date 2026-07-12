@@ -1,48 +1,123 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function BioCard({ member }) {
-  const [expanded, setExpanded] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [imgError, setImgError] = useState(false);
 
+  const handleCardClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      setIsModalOpen(true);
+    }
+  };
+
+  // Close modal on Escape key press
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        setIsModalOpen(false);
+      }
+    };
+    
+    if (isModalOpen) {
+      document.addEventListener('keydown', handleEscape);
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+    
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = '';
+    };
+  }, [isModalOpen]);
+
   return (
-    <article className="soft-panel flex flex-col overflow-hidden p-0">
-      {/* Profile image - cropped circle inset */}
-       <div className="relative mx-auto mt-6 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border-4 border-white bg-brand-rose/20 shadow-xl shadow-slate-900/20 sm:h-36 sm:w-36">
-        <img
-          src={member.image}
-          alt={`${member.name} portrait`}
-          className="h-full w-full object-cover object-top"
-          style={member.imagePosition ? { objectPosition: member.imagePosition } : undefined}
-          loading="lazy"
-          onError={() => setImgError(true)}
-          onLoad={(e) => {
-            // Apply zoom crop on load to focus on upper portion (face area)
-            const img = e.target;
-            const rect = img.getBoundingClientRect();
-            if (img.naturalHeight > img.naturalWidth) {
-              // portrait image - zoom slightly and shift down to crop background
-              const scale = img.naturalHeight / rect.height;
-              const offset = Math.min(img.naturalWidth * 0.15, 50);
-              img.style.objectPosition = `center ${offset}px`;
-            }
-          }}
-        />
-      </div>
+    <>
+      {/* Compact Team Member Card */}
+      <article 
+        className="soft-panel flex flex-col items-center p-6 cursor-pointer transition-all duration-200 hover:shadow-lg hover:scale-[1.02]"
+        onClick={handleCardClick}
+        onKeyDown={handleKeyDown}
+        tabIndex={0}
+        role="button"
+        aria-label={`View profile of ${member.name}`}
+      >
+        {/* Profile image - cropped circle */}
+        <div className="relative flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border-4 border-white bg-brand-rose/20 shadow-xl shadow-slate-900/20 sm:h-36 sm:w-36">
+          <img
+            src={member.image}
+            alt={`${member.name} portrait`}
+            className="h-full w-full object-cover object-top"
+            loading="lazy"
+            onError={() => setImgError(true)}
+          />
+        </div>
 
-      <div className="p-6 sm:p-7">
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">{member.role}</p>
-        <h3 className="mt-3 text-center font-heading text-2xl text-slate-900">{member.name}</h3>
-        <div className="mx-auto mt-2 h-0.5 w-12 rounded-full bg-brand-rose/40" />
-        <p className="mt-3 text-center text-sm leading-relaxed text-slate-600">{member.focus}</p>
+        <div className="mt-4 text-center">
+          <h3 className="font-heading text-xl text-slate-900 sm:text-2xl">{member.name}</h3>
+          <p className="mt-1 text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">{member.role}</p>
+        </div>
+      </article>
 
-        <div className="mt-5 border-t border-slate-200 pt-5">
-          <div className="space-y-3 text-sm leading-7 text-slate-700">
-            {member.bio.map((paragraph, i) => (
-              <p key={`${member.name}-bio-${i}`}>{paragraph}</p>
-            ))}
+      {/* Modal for Detailed Profile */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+          onClick={handleCloseModal}
+        >
+          <div 
+            className="soft-panel max-w-2xl w-full max-h-[90vh] overflow-y-auto relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={handleCloseModal}
+              className="absolute top-4 right-4 p-2 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors"
+              aria-label="Close profile"
+            >
+              <svg className="h-5 w-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <div className="flex flex-col md:flex-row gap-6 p-6 sm:p-8">
+              {/* Profile image */}
+              <div className="relative flex-shrink-0">
+                <div className="h-48 w-48 sm:h-56 sm:w-56 overflow-hidden rounded-full border-4 border-white bg-brand-rose/20 shadow-xl shadow-slate-900/20">
+                  <img
+                    src={member.image}
+                    alt={`${member.name} portrait`}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                    onError={() => setImgError(true)}
+                  />
+                </div>
+              </div>
+
+              {/* Profile details */}
+              <div className="flex-1 pt-2 md:pt-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">{member.role}</p>
+                <h2 className="mt-2 font-heading text-2xl text-slate-900 sm:text-3xl">{member.name}</h2>
+                <div className="mt-2 h-0.5 w-12 rounded-full bg-brand-rose/40" />
+                <p className="mt-3 text-sm leading-relaxed text-slate-600 font-medium">{member.focus}</p>
+                
+                <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
+                  {member.bio.map((paragraph, i) => (
+                    <p key={`${member.name}-bio-${i}`}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </article>
+      )}
+    </>
   );
 }
