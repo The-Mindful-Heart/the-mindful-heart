@@ -47,10 +47,16 @@ export default function BlogSection({ config, loading }) {
   const [activePost, setActivePost] = useState(null);
   const posts = config?.posts ?? [];
 
+  const getGridCols = () => {
+    if (posts.length === 1) return "md:grid-cols-1";
+    if (posts.length === 2) return "md:grid-cols-2";
+    return "md:grid-cols-2 lg:grid-cols-3";
+  };
+
   return (
-    <section id="blogs" className="bg-brand-rose/10 py-16">
+    <section id="blogs" className="bg-brand-rose/10 pb-16">
       <div className="section-shell">
-        <div className="mb-8 max-w-2xl">
+        <div className="max-w-2xl">
           <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">{config?.title ?? "Blogs & Resources"}</h2>
           {config?.description ? (
             <p className="mt-3 text-base leading-8 text-slate-700">{config.description}</p>
@@ -65,7 +71,7 @@ export default function BlogSection({ config, loading }) {
             <code className="text-xs">public/config/blogs.json</code>.
           </div>
         ) : (
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className={`grid gap-4 ${getGridCols()}`}>
             {posts.map((post) => (
               <button
                 key={post.id}

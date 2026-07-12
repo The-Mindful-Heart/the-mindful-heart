@@ -3,12 +3,12 @@
   "description": "Psychoeducational articles and resources from The Mindful Heart team. Add HTML or PDF files to the blogs folder and list them here.",
   "posts": [
     {
-      "id": "understanding-anxiety",
-      "title": "Understanding Anxiety: A Gentle Guide",
-      "summary": "What anxiety is, how it shows up in the body, and practical ways to begin working with it.",
-      "date": "2026-04-15",
+      "id": "how-to-find-the-right-therapist",
+      "title": "How to Find the Right Therapist",
+      "summary": "A comprehensive guide covering qualifications, expertise, therapeutic approaches, budget, and how to choose a therapist who is the right fit for your unique needs.",
+      "date": "2026-04-30",
       "author": "The Mindful Heart Team",
-      "file": "/blogs/understanding-anxiety.html",
+      "file": "/blogs/how-to-find-a-right-therapist.html",
       "type": "html"
     }
   ]

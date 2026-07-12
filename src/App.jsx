@@ -20,6 +20,7 @@ function App() {
   const teamSection = siteData.team ?? {};
   const booking = siteData.booking ?? {};
   const impactStats = siteData.impactStats ?? [];
+  const contact = siteData.contact ?? {};
 
   if (loading) {
     return (
@@ -30,21 +31,31 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-brand-offwhite text-slate-800">
+    <div className="relative z-10 min-h-screen text-slate-800">
+      <div className="smoke-bg" aria-hidden="true">
+        <div className="smoke-container">
+          <div className="smoke-puff smoke-puff-1" />
+          <div className="smoke-puff smoke-puff-2" />
+          <div className="smoke-puff smoke-puff-3" />
+          <div className="smoke-puff smoke-puff-4" />
+          <div className="smoke-wisp smoke-wisp-1" />
+          <div className="smoke-wisp smoke-wisp-2" />
+          <div className="smoke-wisp smoke-wisp-3" />
+        </div>
+      </div>
       <Header site={siteData} />
 
-      <main id="home">
-        <section className="section-shell py-14 md:py-20">
+      <main>
+        <section id="home" className="-mt-24 scroll-mt-24 section-shell pt-24">
           <div className="soft-panel relative overflow-hidden p-8 sm:p-10 lg:p-14">
             {hero.backgroundImage ? (
-              <img
-                src={hero.backgroundImage}
-                alt=""
-                className="absolute inset-0 h-full w-full object-cover opacity-20"
-                loading="lazy"
-              />
+                  <img
+                    src={hero.backgroundImage}
+                    alt=""
+                    className="absolute inset-0 h-full w-full object-cover opacity-10"
+                    loading="lazy"
+                  />
             ) : null}
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-offwhite/95 via-brand-offwhite/90 to-brand-rose/25" />
             <div className="relative grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
               <div className="space-y-6">
                 {hero.badge ? (
@@ -87,7 +98,7 @@ function App() {
           </div>
         </section>
 
-        <section id="about" className="bg-brand-rose/10 py-16">
+        <section id="about" className="scroll-mt-20 bg-brand-rose/10 py-8">
           <div className="section-shell grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="soft-panel p-7 sm:p-9">
               {about.label ? (
@@ -114,8 +125,8 @@ function App() {
           </div>
         </section>
 
-        <section id="goals" className="section-shell py-16">
-          <div className="mb-8 max-w-2xl">
+        <section id="goals" className="scroll-mt-20 section-shell pb-4">
+          <div className="max-w-2xl">
             <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">{goals.title ?? "Our Goals"}</h2>
             {goals.description ? (
               <p className="mt-3 text-base leading-8 text-slate-700">{goals.description}</p>
@@ -131,9 +142,9 @@ function App() {
           </div>
         </section>
 
-        <section id="services" className="bg-brand-rose/10 py-16">
+        <section id="services" className="pb-4">
           <div className="section-shell">
-            <div className="mb-8 max-w-2xl">
+            <div className="max-w-2xl">
               <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">
                 {servicesSection.title ?? "Our Work"}
               </h2>
@@ -141,22 +152,54 @@ function App() {
                 <p className="mt-4 text-base leading-8 text-slate-700">{servicesSection.description}</p>
               ) : null}
             </div>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:justify-items-center">
               {(services.data ?? []).map((service) => (
                 <ServiceCard key={service} service={service} />
               ))}
             </div>
+            <div className="mt-6 soft-panel p-6">
+              <h3 className="font-heading text-2xl text-slate-900">{contact.title ?? "Contact Us"}</h3>
+              {contact.address ? (
+                <div className="mt-4 space-y-3 text-base leading-8 text-slate-700">
+                  <p className="flex items-start gap-2">
+                    <svg className="mt-1 h-5 w-5 flex-shrink-0 text-brand-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243A8 8 0 1117.657 16.657z" />
+                      <circle cx="12" cy="11" r="1.5" fill="currentColor" />
+                    </svg>
+                    <span>{contact.address}</span>
+                  </p>
+                   {contact.phone ? (
+                     <p className="flex items-center gap-2">
+                       <svg className="h-5 w-5 flex-shrink-0 text-brand-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                       </svg>
+                       <a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="hover:text-sky-700">
+                         {contact.phoneLabel ?? "Call Us"}: {contact.phone}
+                       </a>
+                     </p>
+                   ) : null}
+                   {contact.hours ? (
+                     <div className="mt-4">
+                       <p className="flex items-start gap-2">
+                         <svg className="mt-1 h-5 w-5 flex-shrink-0 text-brand-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                         </svg>
+                         <div>
+                           {contact.hours.map((hour, i) => (
+                             <p key={i} className="text-sm">{hour}</p>
+                           ))}
+                         </div>
+                       </p>
+                     </div>
+                   ) : null}
+                </div>
+              ) : null}
+            </div>
           </div>
         </section>
 
-        <VideoReel config={videos.data} />
-
-        <EventsSection config={events.data} loading={events.loading} />
-
-        <BlogSection config={blogs.data} loading={blogs.loading} />
-
-        <section id="team" className="section-shell py-16">
-          <div className="mb-8 flex items-end justify-between gap-4">
+        <section id="team" className="section-shell pb-4">
+          <div className="flex items-end justify-between gap-4">
             <div>
               <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">
                 {teamSection.title ?? "Meet the Team"}
@@ -173,7 +216,14 @@ function App() {
           </div>
         </section>
 
-        <section id="book" className="section-shell pb-20">
+
+        <VideoReel config={videos.data} />
+
+        <EventsSection config={events.data} loading={events.loading} />
+
+        <BlogSection config={blogs.data} loading={blogs.loading} />
+
+        <section id="book" className="scroll-mt-20 section-shell pb-20">
           <div className="mb-8 max-w-2xl">
             <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">
               {booking.title ?? "Book an Appointment"}

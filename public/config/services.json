@@ -1,9 +1,31 @@
 [
-  "Individual psychotherapy",
-  "Adolescent therapy",
-  "Psychological assessments and case formulation",
-  "Workshops and psychoeducational webinars",
-  "Trauma-informed and neurodivergence-affirming care",
-  "Supervision and reflective learning spaces",
-  "Online and in-person sessions"
+  {
+    "title": "Individual psychotherapy",
+    "description": "One-on-one therapy for anxiety, depression, grief, trauma, and life transitions."
+  },
+  {
+    "title": "Adolescent therapy",
+    "description": "Support for teens navigating emotional distress, relationships, identity, and school stress."
+  },
+  {
+    "title": "Psychological assessments and case formulation",
+    "description": "Structured clinical assessments and formulations to understand and address concerns clearly."
+  },
+  {
+    "title": "Workshops and psychoeducational webinars",
+    "description": "Group learning sessions on mental health topics for organizations, schools, and communities.",
+    "link": "#events"
+  },
+  {
+    "title": "Trauma-informed and neurodivergence-affirming care",
+    "description": "Inclusive care that recognizes trauma, neurodiversity, and diverse lived experiences."
+  },
+  {
+    "title": "Supervision and reflective learning spaces",
+    "description": "Reflective supervision for mental health professionals and trainees."
+  },
+  {
+    "title": "Online and in-person sessions",
+    "description": "Flexible therapy sessions through secure online or in-clinic formats."
+  }
 ]

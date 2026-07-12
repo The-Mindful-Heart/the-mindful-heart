@@ -1,7 +1,7 @@
 {
   "brand": {
     "name": "The Mindful Heart",
-    "tagline": "The Mindful Heart",
+    "tagline": "A space to help your mind and heart meet",
     "logo": "/images/logo.png"
   },
   "hero": {
@@ -9,7 +9,7 @@
     "title": "Clinical psychology",
     "titleAccent": "with depth, warmth, and dignity.",
     "description": "When life feels heavy, confusing, or lonely, therapy can become a steady place to breathe, reflect, and begin again. At The Mindful Heart, we walk alongside adolescents and adults with compassionate, inclusive, and clinically grounded care that helps you reconnect with safety, meaning, and emotional balance.",
-    "backgroundImage": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=2000&q=80&fm=webp",
+    "backgroundImage": "https://www.simplypsychology.org/wp-content/uploads/Psychotherapy.jpg",
     "primaryCta": {
       "label": "Book an Appointment",
       "href": "#book"
@@ -33,10 +33,11 @@
     ]
   },
   "impactStats": [
-    { "value": "1:1 Care", "label": "Personalized therapy pathways" },
     { "value": "Inclusive", "label": "Affirmative and stigma-free practice" },
     { "value": "Humanistic", "label": "Relational, insight-oriented support" },
-    { "value": "Evidence-led", "label": "Clinical integrity with lived empathy" }
+    { "value": "Evidence-led", "label": "Clinical integrity with lived empathy" },
+    { "value": "Trauma Informed", "label": "Trauma-informed care" },
+    { "value": "Experiential", "label": "Experiential learning opportunities" }
   ],
   "goals": {
     "title": "Our Goals",
@@ -64,13 +65,26 @@
     "email": "mindfulheartchennai@gmail.com",
     "emailLabel": "Email Us"
   },
+  "contact": {
+    "title": "Contact Us",
+    "address": "F2, first floor, 9A, Shankuthala Ammal Illama, VOC St, Jagannatha Nagar, Arumbakkam, Chennai, Tamil Nadu 600106",
+    "phone": "098866 20629",
+    "phoneLabel": "Call Us",
+    "hours": [
+      "Monday – Friday: 12:00 PM to 7:00 PM",
+      "Saturday: 9:00 AM to 1:30 PM",
+      "Sunday: Closed"
+    ]
+  },
   "navigation": [
     { "label": "About", "href": "#about" },
     { "label": "Services", "href": "#services" },
-    { "label": "Videos", "href": "#videos" },
+    { "label": "Team", "href": "#team" },
+    { "label": "Gallery", "href": "#videos" },
     { "label": "Events", "href": "#events" },
     { "label": "Blogs", "href": "#blogs" },
-    { "label": "Psychologists", "href": "#team" },
-    { "label": "Connect on Instagram", "href": "https://www.instagram.com/the_mindfulheart/", "external": true, "icon": "instagram" }
+    { "label": "Connect on Instagram", "href": "https://www.instagram.com/the_mindfulheart/", "external": true, "icon": "instagram" },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/company/the-mindfulheart/", "external": true, "icon": "linkedin" },
+    { "label": "Google", "href": "https://share.google/JxYSduwdIjlACy3ve", "external": true, "icon": "google" }
   ]
 }

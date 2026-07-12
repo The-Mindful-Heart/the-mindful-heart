@@ -7,7 +7,7 @@ export default function BioCard({ member }) {
   return (
     <article className="soft-panel overflow-hidden p-0">
       {/* Profile image - cropped circle inset */}
-      <div className="relative mx-auto mt-8 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border-4 border-white bg-brand-rose/20 shadow-xl shadow-slate-900/20 sm:h-36 sm:w-36">
+       <div className="relative mx-auto mt-8 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border-4 border-white bg-brand-rose/20 shadow-xl shadow-slate-900/20 sm:h-36 sm:w-36">
         <img
           src={member.image}
           alt={`${member.name} portrait`}
