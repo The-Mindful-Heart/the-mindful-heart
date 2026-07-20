@@ -99,9 +99,11 @@ function App() {
         </section>
 
         <section id="about" className="scroll-mt-20 bg-brand-rose/10 py-8">
+          <div className="section-shell mb-4">
+            <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>About</span>
+          </div>
           <div className="section-shell grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="soft-panel p-7 sm:p-9">
-              <span className="section-label">About</span>
               {about.label ? (
                 <p className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">{about.label}</p>
               ) : null}
@@ -126,28 +128,34 @@ function App() {
           </div>
         </section>
 
-        <section id="goals" className="scroll-mt-20 section-shell pb-4">
-          <div className="max-w-2xl">
-            <span className="section-label">Our Goals</span>
-            <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">{goals.title ?? "Our Goals"}</h2>
-            {goals.description ? (
-              <p className="mt-3 text-base leading-8 text-slate-700">{goals.description}</p>
-            ) : null}
+        <section id="goals" className="scroll-mt-20 pb-4">
+          <div className="section-shell mb-4">
+            <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Our Goals</span>
           </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            {(goals.items ?? []).map((goal) => (
-              <div key={goal} className="soft-panel flex items-start gap-3 p-5">
-                <span className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-mint" />
-                <p className="text-sm leading-7 text-slate-700">{goal}</p>
-              </div>
-            ))}
+          <div className="section-shell">
+            <div className="max-w-2xl">
+              <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">{goals.title ?? "Our Goals"}</h2>
+              {goals.description ? (
+                <p className="mt-3 text-base leading-8 text-slate-700">{goals.description}</p>
+              ) : null}
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+              {(goals.items ?? []).map((goal) => (
+                <div key={goal} className="soft-panel flex items-start gap-3 p-5">
+                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-mint" />
+                  <p className="text-sm leading-7 text-slate-700">{goal}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         <section id="services" className="pb-4">
+          <div className="section-shell mb-4">
+            <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Services</span>
+          </div>
           <div className="section-shell">
             <div className="max-w-2xl">
-              <span className="section-label">Services</span>
               <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">
                 {servicesSection.title ?? "Our Work"}
               </h2>
@@ -209,25 +217,28 @@ function App() {
           </div>
         </section>
 
-        <section id="team" className="scroll-mt-20 section-shell pb-4">
-          <div className="flex items-end justify-between gap-4">
-            <div>
-              <span className="section-label">Team</span>
-              <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">
-                {teamSection.title ?? "Meet the Team"}
-              </h2>
-              {teamSection.description ? (
-                <p className="mt-3 max-w-2xl text-base leading-8 text-slate-700">{teamSection.description}</p>
-              ) : null}
+        <section id="team" className="scroll-mt-20 pb-4">
+          <div className="section-shell mb-4">
+            <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Team</span>
+          </div>
+          <div className="section-shell">
+            <div className="flex items-end justify-between gap-4">
+              <div>
+                <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">
+                  {teamSection.title ?? "Meet the Team"}
+                </h2>
+                {teamSection.description ? (
+                  <p className="mt-3 max-w-2xl text-base leading-8 text-slate-700">{teamSection.description}</p>
+                ) : null}
+              </div>
+            </div>
+            <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+              {(team.data ?? []).map((member) => (
+                <BioCard key={member.name} member={member} />
+              ))}
             </div>
           </div>
-          <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-            {(team.data ?? []).map((member) => (
-              <BioCard key={member.name} member={member} />
-            ))}
-          </div>
         </section>
-
 
         <VideoReel config={videos.data} />
 
@@ -235,22 +246,26 @@ function App() {
 
         <BlogSection config={blogs.data} loading={blogs.loading} />
 
-        <section id="book" className="scroll-mt-20 section-shell pb-20">
-          <div className="mb-8 max-w-2xl">
-            <span className="section-label">Booking</span>
-            <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">
-              {booking.title ?? "Book an Appointment"}
-            </h2>
-            {booking.description ? (
-              <p className="mt-4 text-base leading-8 text-slate-700">{booking.description}</p>
-            ) : null}
-            {booking.email ? (
-              <a href={`mailto:${booking.email}`} className="mt-4 inline-block text-sm font-semibold text-sky-700 hover:text-sky-900">
-                {booking.emailLabel ?? "Email Us"}: {booking.email}
-              </a>
-            ) : null}
+        <section id="book" className="scroll-mt-20 pb-20">
+          <div className="section-shell mb-4">
+            <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Booking</span>
           </div>
-          <BookingForm booking={booking} />
+          <div className="section-shell">
+            <div className="mb-8 max-w-2xl">
+              <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">
+                {booking.title ?? "Book an Appointment"}
+              </h2>
+              {booking.description ? (
+                <p className="mt-4 text-base leading-8 text-slate-700">{booking.description}</p>
+              ) : null}
+              {booking.email ? (
+                <a href={`mailto:${booking.email}`} className="mt-4 inline-block text-sm font-semibold text-sky-700 hover:text-sky-900">
+                  {booking.emailLabel ?? "Email Us"}: {booking.email}
+                </a>
+              ) : null}
+            </div>
+            <BookingForm booking={booking} />
+          </div>
         </section>
       </main>
 

@@ -29,9 +29,11 @@ export default function VideoReel({ config }) {
 
   return (
     <section id="videos" className="bg-brand-rose/10 pt-0 pb-4">
+      <div className="section-shell mb-4">
+        <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Videos</span>
+      </div>
       <div className="section-shell">
         <div className="max-w-2xl">
-          <span className="section-label">Videos</span>
           <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">{config.title}</h2>
           {config.description ? (
             <p className="mt-3 text-base leading-8 text-slate-700">{config.description}</p>

@@ -21,7 +21,14 @@ body {
 }
 
 .section-label {
-  @apply mb-3 inline-block rounded-full bg-brand-sky/20 px-4 py-1 text-xs font-bold uppercase tracking-[0.18em] text-sky-800;
+  margin-bottom: 0.75rem;
+  display: block;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #0369a1;
 }
 
 .soft-panel {

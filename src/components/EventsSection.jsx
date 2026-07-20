@@ -1,4 +1,3 @@
-
 import { formatEventDate } from "../utils/helpers";
 import VideoEmbed from "./VideoEmbed";
 
@@ -115,44 +114,48 @@ export function EventsSection({ config, loading }) {
   const completed = config?.completed ?? [];
 
   return (
-    <section id="events" className="section-shell pb-4">
-      <div className="max-w-2xl">
-        <span className="section-label">Events</span>
-        <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">{config?.title ?? "Events & Workshops"}</h2>
-        {config?.description ? (
-          <p className="mt-3 text-base leading-8 text-slate-700">{config.description}</p>
-        ) : null}
+    <section id="events" className="pb-4">
+      <div className="section-shell mb-4">
+        <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Events</span>
       </div>
-
-      {loading ? (
-        <div className="soft-panel p-6 text-sm text-slate-600">Loading events...</div>
-      ) : (
-        <div className="space-y-12">
-          {ongoing.length > 0 ? (
-            <div>
-              <h3 className="mb-5 font-heading text-xl text-slate-800">{config?.ongoingLabel ?? "Upcoming"}</h3>
-              <div className="grid gap-5 md:grid-cols-2">
-                {ongoing.map((event) => (
-                  <EventCard key={event.id ?? event.title} event={event} />
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className="soft-panel p-6 text-sm text-slate-600">No upcoming events at the moment. Check back soon.</div>
-          )}
-
-          {completed.length > 0 ? (
-            <div>
-              <h3 className="mb-5 font-heading text-xl text-slate-800">{config?.completedLabel ?? "Past Events"}</h3>
-              <div className="grid gap-5 md:grid-cols-2">
-                {completed.map((event) => (
-                  <EventCard key={event.id ?? event.title} event={event} />
-                ))}
-              </div>
-            </div>
+      <div className="section-shell">
+        <div className="max-w-2xl">
+          <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">{config?.title ?? "Events & Workshops"}</h2>
+          {config?.description ? (
+            <p className="mt-3 text-base leading-8 text-slate-700">{config.description}</p>
           ) : null}
         </div>
-      )}
+
+        {loading ? (
+          <div className="soft-panel p-6 text-sm text-slate-600">Loading events...</div>
+        ) : (
+          <div className="space-y-12">
+            {ongoing.length > 0 ? (
+              <div>
+                <h3 className="mb-5 font-heading text-xl text-slate-800">{config?.ongoingLabel ?? "Upcoming"}</h3>
+                <div className="grid gap-5 md:grid-cols-2">
+                  {ongoing.map((event) => (
+                    <EventCard key={event.id ?? event.title} event={event} />
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="soft-panel p-6 text-sm text-slate-600">No upcoming events at the moment. Check back soon.</div>
+            )}
+
+            {completed.length > 0 ? (
+              <div>
+                <h3 className="mb-5 font-heading text-xl text-slate-800">{config?.completedLabel ?? "Past Events"}</h3>
+                <div className="grid gap-5 md:grid-cols-2">
+                  {completed.map((event) => (
+                    <EventCard key={event.id ?? event.title} event={event} />
+                  ))}
+                </div>
+              </div>
+            ) : null}
+          </div>
+        )}
+      </div>
     </section>
   );
 }
