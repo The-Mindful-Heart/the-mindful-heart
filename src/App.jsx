@@ -45,7 +45,7 @@ function App() {
       </div>
       <Header site={siteData} />
 
-      <main>
+      <main className="scroll-pt-24">
         <section id="home" className="-mt-24 scroll-mt-24 section-shell pt-24">
           <div className="soft-panel relative overflow-hidden p-8 sm:p-10 lg:p-14">
             {hero.backgroundImage ? (
@@ -98,7 +98,7 @@ function App() {
           </div>
         </section>
 
-        <section id="about" className="scroll-mt-20 bg-brand-rose/10 py-8">
+        <section id="about" className="scroll-mt-24 bg-brand-rose/10 py-8">
           <div className="section-shell mb-4">
             <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>About</span>
           </div>
@@ -128,7 +128,7 @@ function App() {
           </div>
         </section>
 
-        <section id="goals" className="scroll-mt-20 pb-4">
+        <section id="goals" className="scroll-mt-24 pb-4 bg-brand-rose/10">
           <div className="section-shell mb-4">
             <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Our Goals</span>
           </div>
@@ -150,7 +150,7 @@ function App() {
           </div>
         </section>
 
-        <section id="services" className="pb-4">
+        <section id="services" className="scroll-mt-24 pb-4 bg-brand-rose/10">
           <div className="section-shell mb-4">
             <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Services</span>
           </div>
@@ -217,7 +217,7 @@ function App() {
           </div>
         </section>
 
-        <section id="team" className="scroll-mt-20 pb-4">
+        <section id="team" className="scroll-mt-24 pb-4 bg-brand-rose/10">
           <div className="section-shell mb-4">
             <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Team</span>
           </div>
@@ -246,7 +246,7 @@ function App() {
 
         <BlogSection config={blogs.data} loading={blogs.loading} />
 
-        <section id="book" className="scroll-mt-20 pb-20">
+        <section id="book" className="scroll-mt-24 pb-20 bg-brand-rose/10">
           <div className="section-shell mb-4">
             <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Booking</span>
           </div>

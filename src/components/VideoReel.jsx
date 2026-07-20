@@ -28,7 +28,7 @@ export default function VideoReel({ config }) {
   const activeVideo = videos[activeIndex];
 
   return (
-    <section id="videos" className="bg-brand-rose/10 pt-0 pb-4">
+    <section id="videos" className="scroll-mt-24 bg-brand-rose/10 pt-0 pb-4">
       <div className="section-shell mb-4">
         <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Videos</span>
       </div>

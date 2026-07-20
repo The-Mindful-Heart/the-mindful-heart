@@ -22,13 +22,31 @@ body {
 
 .section-label {
   margin-bottom: 0.75rem;
-  display: block;
+  display: inline-block;
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #0369a1;
+}
+
+section h2 {
+  display: none;
+}
+
+section h2 + p,
+section h2 + div + p {
+  display: none;
+}
+
+#goals, #services, #team, #book, #videos, #events, #blogs {
+  background-color: rgba(248, 187, 208, 0.1);
+}
+
+section {
+  position: relative;
+  z-index: 1;
 }
 
 .soft-panel {
