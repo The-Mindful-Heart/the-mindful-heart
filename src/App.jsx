@@ -258,11 +258,6 @@ function App() {
               {booking.description ? (
                 <p className="mt-4 text-base leading-8 text-slate-700">{booking.description}</p>
               ) : null}
-              {booking.email ? (
-                <a href={`mailto:${booking.email}`} className="mt-4 inline-block text-sm font-semibold text-sky-700 hover:text-sky-900">
-                  {booking.emailLabel ?? "Email Us"}: {booking.email}
-                </a>
-              ) : null}
             </div>
             <BookingForm booking={booking} />
           </div>
