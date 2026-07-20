@@ -198,7 +198,7 @@ function App() {
           </div>
         </section>
 
-        <section id="team" className="section-shell pb-4">
+        <section id="team" className="scroll-mt-20 section-shell pb-4">
           <div className="flex items-end justify-between gap-4">
             <div>
               <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">
