@@ -1,31 +1,33 @@
 [
   {
-    "title": "Individual psychotherapy",
-    "description": "One-on-one therapy for anxiety, depression, grief, trauma, and life transitions."
+    "title": "Individual Psychotherapy",
+    "description": "One-on-one therapy for anxiety, depression, grief, trauma, and life transitions.",
+    "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeTXT6Wtl831L1-U3fqezqYTdZDIUUyA0n3bXS4OZX7A3GhNw/viewform?embedded=true"
   },
   {
-    "title": "Adolescent therapy",
-    "description": "Support for teens navigating emotional distress, relationships, identity, and school stress."
+    "title": "Child and Adolescent therapy",
+    "description": "Support for children and adolescents navigating emotional distress, relationships, identity, and school stress.",
+    "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfY6PeDy87OqWy8qOjeEbfI4fWRcY2xOkviKbAEmSfnd-yf_w/viewform?embedded=true"
   },
   {
-    "title": "Psychological assessments and case formulation",
-    "description": "Structured clinical assessments and formulations to understand and address concerns clearly."
+    "title": "Psychological Assessments",
+    "description": "Structured clinical assessments to understand and address concerns clearly.",
+    "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd1HPme6ytQme3wKNdy22J0ylybWt2SwgfxS8e3H1rvbXj4IQ/viewform?embedded=true"
   },
   {
-    "title": "Workshops and psychoeducational webinars",
+    "title": "Workshops",
     "description": "Group learning sessions on mental health topics for organizations, schools, and communities.",
-    "link": "#events"
+    "link": "#events",
+    "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScc_2_J036y7LkwTtWIyOrFsszfZZDpM9IZPCBuP59oQkpyvw/viewform?embedded=true"
   },
   {
-    "title": "Trauma-informed and neurodivergence-affirming care",
-    "description": "Inclusive care that recognizes trauma, neurodiversity, and diverse lived experiences."
+    "title": "Internships",
+    "description": "Structured training and mentorship for psychology students and early-career professionals.",
+    "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeXOnMDgAfKeAmj-uQI4rPQSI__nReXxlYLkEX4HtRmRoeidQ/viewform?embedded=true"
   },
   {
-    "title": "Supervision and reflective learning spaces",
-    "description": "Reflective supervision for mental health professionals and trainees."
-  },
-  {
-    "title": "Online and in-person sessions",
-    "description": "Flexible therapy sessions through secure online or in-clinic formats."
+    "title": "Supervision",
+    "description": "Reflective supervision for mental health professionals and trainees.",
+    "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfiCAUBBNgUJCrXSFJUFBIXonWAN1xY12bYcyHcl9orEdWESw/viewform?embedded=true"
   }
 ]

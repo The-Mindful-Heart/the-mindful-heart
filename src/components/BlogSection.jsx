@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { formatEventDate } from "../utils/helpers";
 
 function BlogViewer({ post, onClose }) {
@@ -34,7 +34,7 @@ function BlogViewer({ post, onClose }) {
               src={post.file}
               title={post.title}
               className="h-[75vh] w-full border-0"
-              sandbox="allow-same-origin"
+              sandbox="allow-same-origin allow-top-navigation allow-scripts"
             />
           )}
         </div>
@@ -46,6 +46,20 @@ function BlogViewer({ post, onClose }) {
 export default function BlogSection({ config, loading }) {
   const [activePost, setActivePost] = useState(null);
   const posts = config?.posts ?? [];
+
+  useEffect(() => {
+    const handleMessage = (event) => {
+      if (event.data === "close-blog") {
+        setActivePost(null);
+        setTimeout(() => {
+          const el = document.getElementById("book");
+          el?.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    };
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
 
   const getGridCols = () => {
     if (posts.length === 1) return "md:grid-cols-1";

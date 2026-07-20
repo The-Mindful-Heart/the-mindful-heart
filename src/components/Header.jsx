@@ -1,4 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const SECTION_LABELS = {
+  home: "Home",
+  about: "About",
+  goals: "Our Goals",
+  services: "Services",
+  team: "Team",
+  videos: "Videos",
+  events: "Events",
+  blogs: "Blogs",
+  book: "Book",
+};
 
 const InstagramIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="inline-block h-4 w-4 align-middle">
@@ -20,8 +32,37 @@ const GoogleIcon = () => (
 
 export default function Header({ site }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const brand = site?.brand ?? {};
   const nav = site?.navigation ?? [];
+
+  useEffect(() => {
+    const sectionIds = Object.keys(SECTION_LABELS);
+    const observers = [];
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveSection(id);
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+      );
+
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((obs) => obs.disconnect());
+  }, []);
+
+  const currentLabel = SECTION_LABELS[activeSection] ?? "";
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-brand-offwhite/90 backdrop-blur">
@@ -44,6 +85,13 @@ export default function Header({ site }) {
             ) : null}
           </div>
         </a>
+
+        {/* Active section indicator - visible on mobile */}
+        <div className="sm:hidden text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">
+            {currentLabel}
+          </p>
+        </div>
 
         <div className="hidden items-center gap-6 text-sm font-medium md:flex">
           {nav.map((item) => (
