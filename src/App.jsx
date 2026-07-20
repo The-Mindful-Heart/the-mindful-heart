@@ -100,7 +100,7 @@ function App() {
 
         <section id="about" className="scroll-mt-24 bg-brand-rose/10 py-8">
           <div className="section-shell mb-4">
-            <span style={{display:'block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)',textAlign:'center'}}>About</span>
+            <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>About</span>
           </div>
           <div className="section-shell grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="soft-panel p-7 sm:p-9">
@@ -130,7 +130,7 @@ function App() {
 
         <section id="goals" className="scroll-mt-24 pb-4 bg-brand-rose/10">
           <div className="section-shell mb-4">
-            <span style={{display:'block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)',textAlign:'center'}}>Our Goals</span>
+            <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Our Goals</span>
           </div>
           <div className="section-shell">
             <div className="max-w-2xl">
@@ -152,7 +152,7 @@ function App() {
 
         <section id="services" className="scroll-mt-24 pb-4 bg-brand-rose/10">
           <div className="section-shell mb-4">
-            <span style={{display:'block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)',textAlign:'center'}}>Services</span>
+            <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Services</span>
           </div>
           <div className="section-shell">
             <div className="max-w-2xl">
@@ -219,7 +219,7 @@ function App() {
 
         <section id="team" className="scroll-mt-24 pb-4 bg-brand-rose/10">
           <div className="section-shell mb-4">
-            <span style={{display:'block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)',textAlign:'center'}}>Team</span>
+            <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Team</span>
           </div>
           <div className="section-shell">
             <div className="flex items-end justify-between gap-4">
@@ -248,7 +248,7 @@ function App() {
 
         <section id="book" className="scroll-mt-24 pb-20 bg-brand-rose/10">
           <div className="section-shell mb-4">
-            <span style={{display:'block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)',textAlign:'center'}}>Booking</span>
+            <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Booking</span>
           </div>
           <div className="section-shell">
             <div className="mb-8 max-w-2xl">
