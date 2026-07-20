@@ -53,7 +53,7 @@ export default function ServiceCard({ service }) {
       <button
         type="button"
         onClick={handleClick}
-        className="service-card soft-panel group relative flex w-full min-h-[120px] flex-col p-5 text-left text-sm font-medium text-slate-800 transition hover:border-brand-sky/50 hover:shadow-boutique"
+        className="service-card soft-panel group relative flex w-full min-h-[120px] flex-col items-center justify-center p-5 text-center text-sm font-medium text-slate-800 transition hover:border-brand-sky/50 hover:shadow-boutique"
       >
         <span className="relative z-10 transition group-hover:opacity-0">{title}</span>
         <span className="service-card-hover absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-3xl bg-brand-sky/90 p-5 text-center opacity-0 transition group-hover:opacity-100">
