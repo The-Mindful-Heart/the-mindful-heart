@@ -71,6 +71,7 @@ export default function BlogSection({ config, loading }) {
     <section id="blogs" className="bg-brand-rose/10 pb-16">
       <div className="section-shell">
         <div className="max-w-2xl">
+          <span className="section-label">Blogs</span>
           <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">{config?.title ?? "Blogs & Resources"}</h2>
           {config?.description ? (
             <p className="mt-3 text-base leading-8 text-slate-700">{config.description}</p>

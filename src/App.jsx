@@ -101,6 +101,7 @@ function App() {
         <section id="about" className="scroll-mt-20 bg-brand-rose/10 py-8">
           <div className="section-shell grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="soft-panel p-7 sm:p-9">
+              <span className="section-label">About</span>
               {about.label ? (
                 <p className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">{about.label}</p>
               ) : null}
@@ -127,6 +128,7 @@ function App() {
 
         <section id="goals" className="scroll-mt-20 section-shell pb-4">
           <div className="max-w-2xl">
+            <span className="section-label">Our Goals</span>
             <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">{goals.title ?? "Our Goals"}</h2>
             {goals.description ? (
               <p className="mt-3 text-base leading-8 text-slate-700">{goals.description}</p>
@@ -145,6 +147,7 @@ function App() {
         <section id="services" className="pb-4">
           <div className="section-shell">
             <div className="max-w-2xl">
+              <span className="section-label">Services</span>
               <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">
                 {servicesSection.title ?? "Our Work"}
               </h2>
@@ -209,6 +212,7 @@ function App() {
         <section id="team" className="scroll-mt-20 section-shell pb-4">
           <div className="flex items-end justify-between gap-4">
             <div>
+              <span className="section-label">Team</span>
               <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">
                 {teamSection.title ?? "Meet the Team"}
               </h2>
@@ -233,6 +237,7 @@ function App() {
 
         <section id="book" className="scroll-mt-20 section-shell pb-20">
           <div className="mb-8 max-w-2xl">
+            <span className="section-label">Booking</span>
             <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">
               {booking.title ?? "Book an Appointment"}
             </h2>
