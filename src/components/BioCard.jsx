@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 export default function BioCard({ member }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [imgError, setImgError] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState(80);
 
   const handleCardClick = () => {
     setIsModalOpen(true);
@@ -17,6 +18,18 @@ export default function BioCard({ member }) {
       setIsModalOpen(true);
     }
   };
+
+  // Update header height for positioning
+  useEffect(() => {
+    const updateHeaderHeight = () => {
+      const height = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 80;
+      setHeaderHeight(height);
+    };
+
+    updateHeaderHeight();
+    window.addEventListener('resize', updateHeaderHeight);
+    return () => window.removeEventListener('resize', updateHeaderHeight);
+  }, []);
 
   // Close modal on Escape key press
   useEffect(() => {
@@ -69,11 +82,12 @@ export default function BioCard({ member }) {
       {/* Modal for Detailed Profile */}
       {isModalOpen && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+          className="fixed inset-x-0 z-[100] flex justify-center bg-black/50 p-4 backdrop-blur-sm animate-fade-in"
+          style={{ top: `${headerHeight}px`, height: `calc(100vh - ${headerHeight}px)` }}
           onClick={handleCloseModal}
         >
           <div 
-            className="soft-panel max-w-2xl w-full max-h-[90vh] overflow-y-auto relative"
+            className="soft-panel max-w-2xl w-full max-h-full overflow-y-auto relative"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
