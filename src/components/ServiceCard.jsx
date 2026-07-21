@@ -17,7 +17,7 @@ function ServiceFormModal({ service, onClose }) {
 
   return (
     <div 
-      className="fixed inset-x-0 z-[100] flex justify-center bg-slate-900/60 p-4 backdrop-blur-sm animate-fade-in"
+      className="fixed inset-x-0 z-[9999] flex justify-center bg-slate-900/60 p-4 backdrop-blur-sm animate-fade-in"
       style={{ top: `${headerHeight}px`, height: `calc(100vh - ${headerHeight}px)` }}
     >
       <div className="soft-panel flex h-full w-full max-w-3xl flex-col overflow-hidden">
