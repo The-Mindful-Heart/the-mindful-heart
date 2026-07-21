@@ -9,7 +9,7 @@ export default function BookingForm({ booking }) {
   }
 
   return (
-    <div className="soft-panel overflow-hidden p-0">
+    <div className="soft-panel overflow-hidden p-6 sm:p-8">
       <iframe
         src={booking.formUrl}
         title="Appointment booking form"

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import BioCard from "./components/BioCard";
 import ServiceCard from "./components/ServiceCard";
@@ -10,6 +11,14 @@ import { useSiteConfigs } from "./hooks/useSiteConfigs";
 
 function App() {
   const { site, services, team, events, videos, blogs, disclaimer, loading } = useSiteConfigs();
+  const [showLoadingAnimation, setShowLoadingAnimation] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoadingAnimation(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const siteData = site.data ?? {};
   const hero = siteData.hero ?? {};
@@ -22,10 +31,14 @@ function App() {
   const impactStats = siteData.impactStats ?? [];
   const contact = siteData.contact ?? {};
 
-  if (loading) {
+  if (loading || showLoadingAnimation) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-brand-offwhite text-slate-600">
-        Loading...
+      <div className="flex min-h-screen items-center justify-center bg-brand-offwhite">
+        <img
+          src="/images/logo-animation.gif"
+          alt="Loading"
+          className="h-24 w-24"
+        />
       </div>
     );
   }
@@ -246,7 +259,7 @@ function App() {
 
         <BlogSection config={blogs.data} loading={blogs.loading} />
 
-        <section id="book" className="scroll-mt-24 pb-20 bg-brand-rose/10">
+        <section id="book" className="scroll-mt-24 pt-16 pb-20 bg-brand-rose/10">
           <div className="section-shell mb-4">
             <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Booking</span>
           </div>

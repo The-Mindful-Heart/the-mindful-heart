@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const SECTION_LABELS = {
   home: "Home",
@@ -33,6 +33,8 @@ const GoogleIcon = () => (
 export default function Header({ site }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [isBookingInView, setIsBookingInView] = useState(false);
+  const headerRef = useRef(null);
   const brand = site?.brand ?? {};
   const nav = site?.navigation ?? [];
 
@@ -49,6 +51,7 @@ export default function Header({ site }) {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setActiveSection(id);
+              setIsBookingInView(id === "book");
             }
           });
         },
@@ -62,10 +65,27 @@ export default function Header({ site }) {
     return () => observers.forEach((obs) => obs.disconnect());
   }, []);
 
+  // Set CSS variable for header height to position modals correctly
+  useEffect(() => {
+    const updateHeaderHeight = () => {
+      if (headerRef.current) {
+        const height = headerRef.current.offsetHeight;
+        document.documentElement.style.setProperty('--header-height', `${height}px`);
+      }
+    };
+
+    updateHeaderHeight();
+    window.addEventListener('resize', updateHeaderHeight);
+    return () => window.removeEventListener('resize', updateHeaderHeight);
+  }, []);
+
   const currentLabel = SECTION_LABELS[activeSection] ?? "";
 
+  // When booking is in view, header should not be sticky to avoid overlaying form modals
+  const headerPositionClass = isBookingInView ? "" : "sticky top-0";
+
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-brand-offwhite/90 backdrop-blur">
+    <header ref={headerRef} className={`${headerPositionClass} z-50 border-b border-slate-200/60 bg-brand-offwhite/90 backdrop-blur`}>
       <nav className="section-shell flex items-center justify-between py-4">
         <a href="#home" className="flex items-center gap-3">
           <div className="h-14 w-14 overflow-hidden rounded-2xl border border-slate-200/60 bg-white/70 shadow-sm">

@@ -1,10 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { scrollToBooking } from "../utils/helpers";
 
 function ServiceFormModal({ service, onClose }) {
+  const [headerHeight, setHeaderHeight] = useState(80);
+
+  useEffect(() => {
+    const updateHeaderHeight = () => {
+      const height = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 80;
+      setHeaderHeight(height);
+    };
+    
+    updateHeaderHeight();
+    window.addEventListener('resize', updateHeaderHeight);
+    return () => window.removeEventListener('resize', updateHeaderHeight);
+  }, []);
+
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/60 p-4 backdrop-blur-sm">
-      <div className="soft-panel flex max-h-[90vh] w-full max-w-3xl flex-col overflow-hidden">
+    <div 
+      className="fixed inset-x-0 z-[100] flex justify-center bg-slate-900/60 p-4 backdrop-blur-sm animate-fade-in"
+      style={{ top: `${headerHeight}px`, height: `calc(100vh - ${headerHeight}px)` }}
+    >
+      <div className="soft-panel flex h-full w-full max-w-3xl flex-col overflow-hidden">
         <div className="flex items-center justify-between border-b border-slate-200/60 px-5 py-4">
           <h3 className="font-heading text-xl text-slate-900">{service.title}</h3>
           <button
@@ -19,7 +35,7 @@ function ServiceFormModal({ service, onClose }) {
           <iframe
             src={service.formUrl}
             title={service.title}
-            className="h-[80vh] w-full border-0"
+            className="h-full w-full border-0"
             allow="fullscreen"
           >
             Loading form...
