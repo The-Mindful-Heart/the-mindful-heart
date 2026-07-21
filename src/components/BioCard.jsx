@@ -31,7 +31,7 @@ export default function BioCard({ member }) {
     return () => window.removeEventListener('resize', updateHeaderHeight);
   }, []);
 
-  // Close modal on Escape key press
+  // Close modal on Escape key press and handle iframe overlay issues
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === 'Escape') {
@@ -43,11 +43,21 @@ export default function BioCard({ member }) {
       document.addEventListener('keydown', handleEscape);
       // Prevent body scroll when modal is open
       document.body.style.overflow = 'hidden';
+      // Lower videos section z-index to prevent iframe overlay
+      const videosSection = document.getElementById('videos');
+      if (videosSection) {
+        videosSection.style.zIndex = '-1';
+      }
     }
     
     return () => {
       document.removeEventListener('keydown', handleEscape);
       document.body.style.overflow = '';
+      // Restore videos section z-index
+      const videosSection = document.getElementById('videos');
+      if (videosSection) {
+        videosSection.style.zIndex = '';
+      }
     };
   }, [isModalOpen]);
 
