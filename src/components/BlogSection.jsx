@@ -1,116 +1,138 @@
-import { useState, useEffect } from "react";
-import { formatEventDate } from "../utils/helpers";
+import { useMemo, useState } from "react";
+import SectionHeading from "./SectionHeading";
+import BlogCard from "./BlogCard";
 
-function BlogViewer({ post, onClose }) {
-  const isPdf = post.type === "pdf";
+function splitCategories(categories, maxPrimaryTabs = 5) {
+  const list = categories ?? [];
+  const primary = [];
+  const more = [];
 
-  return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/60 p-4 backdrop-blur-sm">
-      <div className="soft-panel flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden">
-        <div className="flex items-center justify-between border-b border-slate-200/60 px-5 py-4">
-          <div>
-            <h3 className="font-heading text-xl text-slate-900">{post.title}</h3>
-            {post.date ? (
-              <p className="text-xs text-slate-500">{formatEventDate(post.date)}</p>
-            ) : null}
-          </div>
-          <button
-            type="button"
-            onClick={onClose}
-            className="rounded-full border border-slate-200 px-3 py-1 text-sm font-medium text-slate-600 transition hover:bg-slate-50"
-          >
-            Close
-          </button>
-        </div>
-        <div className="flex-1 overflow-auto">
-          {isPdf ? (
-            <iframe
-              src={post.file}
-              title={post.title}
-              className="h-[75vh] w-full border-0"
-            />
-          ) : (
-            <iframe
-              src={post.file}
-              title={post.title}
-              className="h-[75vh] w-full border-0"
-              sandbox="allow-same-origin allow-top-navigation allow-scripts"
-            />
-          )}
-        </div>
-      </div>
-    </div>
-  );
+  list.forEach((cat, index) => {
+    if (cat.inMoreMenu || (cat.id !== "all" && index >= maxPrimaryTabs)) {
+      more.push(cat);
+    } else {
+      primary.push(cat);
+    }
+  });
+
+  return { primary, more };
 }
 
 export default function BlogSection({ config, loading }) {
-  const [activePost, setActivePost] = useState(null);
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [moreOpen, setMoreOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+
   const posts = config?.posts ?? [];
+  const categories = config?.categories ?? [{ id: "all", label: "All Posts" }];
+  const nav = config?.navigation ?? { showSearch: true, maxPrimaryTabs: 5 };
+  const { primary, more } = splitCategories(categories, nav.maxPrimaryTabs ?? 5);
 
-  useEffect(() => {
-    const handleMessage = (event) => {
-      if (event.data === "close-blog") {
-        setActivePost(null);
-        setTimeout(() => {
-          const el = document.getElementById("book");
-          el?.scrollIntoView({ behavior: "smooth" });
-        }, 100);
-      }
-    };
-    window.addEventListener("message", handleMessage);
-    return () => window.removeEventListener("message", handleMessage);
-  }, []);
+  const filteredPosts = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+    return posts.filter((post) => {
+      const matchesCategory = activeCategory === "all" || post.category === activeCategory;
+      if (!matchesCategory) return false;
+      if (!query) return true;
+      const haystack = [post.title, post.summary, typeof post.author === "string" ? post.author : post.author?.name]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+      return haystack.includes(query);
+    });
+  }, [posts, activeCategory, searchQuery]);
 
-  const getGridCols = () => {
-    if (posts.length === 1) return "md:grid-cols-1";
-    if (posts.length === 2) return "md:grid-cols-2";
-    return "md:grid-cols-2 lg:grid-cols-3";
+  const selectCategory = (id) => {
+    setActiveCategory(id);
+    setMoreOpen(false);
   };
 
   return (
-    <section id="blogs" className="scroll-mt-24 bg-brand-rose/10 pb-16">
-      <div className="section-shell mb-4">
-        <span style={{display:'inline-block',borderRadius:'9999px',backgroundColor:'#e0f2fe',padding:'6px 16px',fontSize:'12px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#075985',boxShadow:'0 1px 2px 0 rgb(0 0 0 / 0.05)'}}>Blogs</span>
-      </div>
+    <section className="bg-brand-rose/10 pb-16">
+      <SectionHeading label="Blogs" title={config?.title ?? "Blogs & Resources"} description={config?.description} />
       <div className="section-shell">
-        <div className="max-w-2xl">
-          <h2 className="font-heading text-3xl text-slate-900 sm:text-4xl">{config?.title ?? "Blogs & Resources"}</h2>
-          {config?.description ? (
-            <p className="mt-3 text-base leading-8 text-slate-700">{config.description}</p>
+        <div className="mb-6 flex flex-col gap-4 border-b border-slate-200/70 pb-4 sm:flex-row sm:items-center sm:justify-between">
+          <nav className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm" aria-label="Blog categories">
+            {primary.map((cat) => (
+              <button
+                key={cat.id}
+                type="button"
+                onClick={() => selectCategory(cat.id)}
+                className={`border-b-2 pb-1 transition ${
+                  activeCategory === cat.id
+                    ? "border-sky-600 font-semibold text-sky-900"
+                    : "border-transparent text-slate-600 hover:text-sky-800"
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+            {more.length > 0 ? (
+              <div className="relative">
+                <button
+                  type="button"
+                  onClick={() => setMoreOpen((open) => !open)}
+                  className={`border-b-2 pb-1 transition ${
+                    more.some((c) => c.id === activeCategory)
+                      ? "border-sky-600 font-semibold text-sky-900"
+                      : "border-transparent text-slate-600 hover:text-sky-800"
+                  }`}
+                >
+                  More {moreOpen ? "▴" : "▾"}
+                </button>
+                {moreOpen ? (
+                  <div className="absolute left-0 top-full z-20 mt-2 min-w-[12rem] rounded-xl border border-slate-200 bg-white py-2 shadow-lg">
+                    {more.map((cat) => (
+                      <button
+                        key={cat.id}
+                        type="button"
+                        onClick={() => selectCategory(cat.id)}
+                        className="block w-full px-4 py-2 text-left text-sm text-slate-700 hover:bg-sky-50"
+                      >
+                        {cat.label}
+                      </button>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            ) : null}
+          </nav>
+
+          {nav.showSearch !== false ? (
+            <label className="relative block w-full sm:max-w-xs">
+              <span className="sr-only">Search posts</span>
+              <input
+                type="search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search posts"
+                className="w-full rounded-full border border-slate-200 bg-white py-2 pl-10 pr-4 text-sm outline-none focus:border-brand-sky focus:ring-2 focus:ring-brand-sky/30"
+              />
+              <svg
+                className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+              </svg>
+            </label>
           ) : null}
         </div>
 
         {loading ? (
           <div className="soft-panel p-6 text-sm text-slate-600">Loading blogs...</div>
-        ) : posts.length === 0 ? (
-          <div className="soft-panel p-6 text-sm text-slate-600">
-            No blog posts yet. Add HTML or PDF files to <code className="text-xs">public/blogs/</code> and list them in{" "}
-            <code className="text-xs">public/config/blogs.json</code>.
-          </div>
+        ) : filteredPosts.length === 0 ? (
+          <div className="soft-panel p-6 text-sm text-slate-600">No posts match this filter yet.</div>
         ) : (
-          <div className={`grid gap-4 ${getGridCols()}`}>
-            {posts.map((post) => (
-              <button
-                key={post.id}
-                type="button"
-                onClick={() => setActivePost(post)}
-                className="soft-panel group p-6 text-left transition hover:border-brand-sky/50 hover:shadow-boutique"
-              >
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
-                  {post.type === "pdf" ? "PDF" : "Article"}
-                  {post.date ? ` · ${formatEventDate(post.date)}` : ""}
-                </p>
-                <h3 className="mt-2 font-heading text-xl text-slate-900 group-hover:text-sky-700">{post.title}</h3>
-                {post.summary ? <p className="mt-3 text-sm leading-7 text-slate-600">{post.summary}</p> : null}
-                {post.author ? <p className="mt-3 text-xs text-slate-500">{post.author}</p> : null}
-                <span className="mt-4 inline-block text-sm font-semibold text-sky-700">Read more →</span>
-              </button>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {filteredPosts.map((post) => (
+              <BlogCard key={post.id} post={post} />
             ))}
           </div>
         )}
       </div>
-
-      {activePost ? <BlogViewer post={activePost} onClose={() => setActivePost(null)} /> : null}
     </section>
   );
 }

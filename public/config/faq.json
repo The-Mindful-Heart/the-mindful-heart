@@ -1,0 +1,200 @@
+{
+  "title": "FAQ",
+  "categories": [
+    {
+      "title": "General",
+      "items": [
+        {
+          "question": "What services does The Mindful Heart provide?",
+          "answer": "The Mindful Heart offers numerous services, including Individual Therapy, Psychological Assessments, Mental Health Workshops and webinars, Internships for Psychology students, and Peer supervision for Therapists."
+        },
+        {
+          "question": "Who can access the services offered by The Mindful Heart?",
+          "answer": "Different services are catered to the needs of people. Our therapy, assessments, and workshops are for anyone seeking mental health support and wanting to improve their mental wellbeing, regardless of age. Internships and peer supervision are for mental health professionals and psychology students."
+        },
+        {
+          "question": "Are your services available online, in person, or both?",
+          "answer": "Both. We currently provide online and in-person services. In-person services are specifically with respect to Chennai."
+        }
+      ]
+    },
+    {
+      "title": "Therapy",
+      "items": [
+        {
+          "question": "How do I book a therapy session?",
+          "answerPrefix": "To book a therapy session, please fill this ",
+          "link": { "href": "/book", "label": "intake form" },
+          "answerSuffix": " and someone from our team will contact you."
+        },
+        {
+          "question": "What are the fees for therapy sessions?",
+          "answer": "Fees depend on the clinician and type of session. Please contact us at mindfulheartchennai@gmail.com or call 098866 20629 for current rates."
+        },
+        {
+          "question": "Can I choose my therapist?",
+          "answer": "Sure. Our team consists of multilingual therapists as well as therapists who hold expertise in diverse areas with diverse modalities of approach. We will ensure to connect you with the therapist that aligns with your needs."
+        },
+        {
+          "question": "How do I know if a therapist is the right fit for me?",
+          "answer": "There’s no one answer for that. Ask yourself what “right fit” means for you—a therapist who gets you or makes you feel safe. It usually takes a few sessions to build rapport. Check in with your experience over the first few sessions to see if it feels like a good match."
+        },
+        {
+          "question": "Can I attend therapy in my preferred language?",
+          "answer": "Yes, when your preferred language matches a therapist on our team. We currently offer sessions in English, Tamil, and Hindi."
+        },
+        {
+          "question": "What can I expect during my first therapy session?",
+          "answer": "The first session involves the therapist getting to know you and what needs support at the moment. Since this is also a new process for you, feel free to bring any questions, doubts, or anything you would like to share with the therapist."
+        },
+        {
+          "question": "How many therapy sessions will I need?",
+          "answer": "There’s no single answer because each person’s concerns vary and may require unique treatment and goal plans."
+        },
+        {
+          "question": "Is everything I share in therapy confidential?",
+          "answer": "Yes, everything you share remains between you and your therapist. This excludes situations where there is a threat to your safety or others—in those cases, therapists are ethically required to act to support you."
+        },
+        {
+          "question": "How can I reschedule or cancel my appointment?",
+          "answer": "At The Mindful Heart, we have policies for cancellation and rescheduling. Let your therapist know at least 24 hours before your session. More details are shared on the consent form for therapy."
+        },
+        {
+          "question": "How do I make payment for my therapy session?",
+          "answer": "You can make payment through net banking or Google Pay. More details are shared on the consent form for therapy."
+        },
+        {
+          "question": "Will I receive an invoice or receipt after payment?",
+          "answer": "Yes, we share a receipt after payment, usually monthly."
+        }
+      ]
+    },
+    {
+      "title": "Psychological Assessments",
+      "items": [
+        {
+          "question": "What psychological assessments do you offer?",
+          "answer": "Assessments are selected based on your concerns and your clinician’s judgment. After an initial discussion, you and your therapist will decide which tools are appropriate."
+        },
+        {
+          "question": "How do I book a psychological assessment?",
+          "answerPrefix": "To book a psychological assessment, please fill out this ",
+          "link": { "href": "https://docs.google.com/forms/d/e/1FAIpQLSd1HPme6ytQme3wKNdy22J0ylybWt2SwgfxS8e3H1rvbXj4IQ/viewform", "label": "intake form", "external": true },
+          "answerSuffix": " and someone from our team will contact you."
+        },
+        {
+          "question": "What are the fees for psychological assessments?",
+          "answer": "Fees depend on the type and number of assessments required. Please contact us for a quote after your initial enquiry."
+        },
+        {
+          "question": "How long does a psychological assessment take?",
+          "answer": "It depends on the client, their concerns, and the therapist’s clinical judgment on what and how many assessments may be required. The process includes the assessment itself and debriefing the report with you."
+        }
+      ]
+    },
+    {
+      "title": "Workshops",
+      "items": [
+        {
+          "question": "What types of workshops does The Mindful Heart offer?",
+          "answer": "We offer workshops for mental health awareness and skill building in the community. These can include, but are not limited to, stress management for employees and understanding parenting styles for children."
+        },
+        {
+          "question": "How do I book a workshop?",
+          "answerPrefix": "To book a workshop, please fill out this ",
+          "link": { "href": "https://docs.google.com/forms/d/e/1FAIpQLScc_2_J036y7LkwTtWIyOrFsszfZZDpM9IZPCBuP59oQkpyvw/viewform", "label": "intake form", "external": true },
+          "answerSuffix": " and someone from our team will contact you."
+        },
+        {
+          "question": "What are the fees for workshops?",
+          "answer": "The fee structure of the workshop varies based on group size, duration, and level of customization."
+        },
+        {
+          "question": "Are workshops conducted online, in person, or both?",
+          "answer": "We offer both online and in-person workshops. In-person workshops are currently offered in Chennai."
+        },
+        {
+          "question": "Can schools, colleges, organizations, or companies request customized workshops?",
+          "answer": "Yes, we understand unique needs and offer customization in our workshops."
+        }
+      ]
+    },
+    {
+      "title": "Internship",
+      "items": [
+        {
+          "question": "How do I apply for an internship at The Mindful Heart?",
+          "answer": "You can reach out to us at Srinidhi.themindfulheart@gmail.com for more details, or submit an enquiry through our internship form on the Services page."
+        },
+        {
+          "question": "Who is eligible to apply for the internship?",
+          "answer": "Our internship is geared toward psychology students and therapists. If you are keenly interested in mental health and want to learn and contribute to the space, feel free to reach out to us."
+        },
+        {
+          "question": "How long is the internship program?",
+          "answer": "Our internship program is usually one month. The duration can be customized based on need, when feasible."
+        },
+        {
+          "question": "What are the internship fees?",
+          "answer": "For more details, reach out to Srinidhi.themindfulheart@gmail.com."
+        },
+        {
+          "question": "Is the internship conducted online, in person, or both?",
+          "answer": "We offer both in-person and online internships. The in-person internship is offered in Chennai at our organization in Arumbakkam."
+        },
+        {
+          "question": "Will I receive a certificate upon completing the internship?",
+          "answer": "Yes, you will receive a certificate based on the internship you have completed at The Mindful Heart."
+        }
+      ]
+    },
+    {
+      "title": "Supervision",
+      "items": [
+        {
+          "question": "What is clinical supervision?",
+          "answer": "According to APA Guidelines for Clinical Supervision, supervision is a collaborative, reflective, and professional learning relationship where therapists discuss their clinical work to improve competence, ethical practice, self-awareness, and client care."
+        },
+        {
+          "question": "Who can join supervision at The Mindful Heart?",
+          "answer": "Qualified mental health professionals and trainees who are engaged in clinical work and seeking structured reflective supervision or peer supervision."
+        },
+        {
+          "question": "What is peer supervision?",
+          "answer": "A group of therapists coming together to hold space for each other. Peer supervision is not one expert-led space but different therapists and peers supporting each other, offering multiple perspectives on the same cases."
+        },
+        {
+          "question": "How do I register for supervision?",
+          "answerPrefix": "You can ",
+          "link": { "href": "https://docs.google.com/forms/d/e/1FAIpQLSfiCAUBBNgUJCrXSFJUFBIXonWAN1xY12bYcyHcl9orEdWESw/viewform", "label": "fill out this form", "external": true },
+          "answerSuffix": " or reach out to us at Srinidhi.themindfulheart@gmail.com to be a part of it."
+        },
+        {
+          "question": "What are the supervision fees?",
+          "answer": "For more details, reach out to us at Srinidhi.themindfulheart@gmail.com."
+        },
+        {
+          "question": "Is supervision conducted online, in person, or both?",
+          "answer": "Currently, we are offering online supervision only."
+        }
+      ]
+    },
+    {
+      "title": "Contact",
+      "items": [
+        {
+          "question": "How can I contact The Mindful Heart?",
+          "answer": "You can connect with us on Instagram, LinkedIn, email (mindfulheartchennai@gmail.com), or by phone (098866 20629)."
+        },
+        {
+          "question": "What are your working hours?",
+          "answer": "We work from 10:30 am to 7 pm on weekdays and 10:30 am to 2:30 pm on Saturdays."
+        },
+        {
+          "question": "How soon can I get an appointment?",
+          "answer": "It may take a minimum of 24 hours to assign you a therapist from our team. It is a thoughtful process to help you be matched with a therapist who is the right fit for you."
+        }
+      ]
+    }
+  ]
+}

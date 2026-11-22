@@ -1,23 +1,24 @@
 import { useState, useEffect } from "react";
-import { scrollToBooking } from "../utils/helpers";
+import { createPortal } from "react-dom";
+import { useNavigate } from "react-router-dom";
 
 function ServiceFormModal({ service, onClose }) {
   const [headerHeight, setHeaderHeight] = useState(80);
 
   useEffect(() => {
     const updateHeaderHeight = () => {
-      const height = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 80;
+      const height = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--header-height")) || 80;
       setHeaderHeight(height);
     };
-    
+
     updateHeaderHeight();
-    window.addEventListener('resize', updateHeaderHeight);
-    return () => window.removeEventListener('resize', updateHeaderHeight);
+    window.addEventListener("resize", updateHeaderHeight);
+    return () => window.removeEventListener("resize", updateHeaderHeight);
   }, []);
 
-  return (
-    <div 
-      className="fixed inset-x-0 z-[9999] flex justify-center bg-slate-900/60 p-4 backdrop-blur-sm animate-fade-in"
+  return createPortal(
+    <div
+      className="fixed inset-x-0 z-[200] flex justify-center bg-slate-900/60 p-4 backdrop-blur-sm animate-fade-in"
       style={{ top: `${headerHeight}px`, height: `calc(100vh - ${headerHeight}px)` }}
     >
       <div className="soft-panel flex h-full w-full max-w-3xl flex-col overflow-hidden">
@@ -42,12 +43,14 @@ function ServiceFormModal({ service, onClose }) {
           </iframe>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
 
 export default function ServiceCard({ service }) {
   const [showForm, setShowForm] = useState(false);
+  const navigate = useNavigate();
   const title = service?.title ?? service;
   const description = service?.description ?? "";
   const link = service?.link ?? null;
@@ -57,10 +60,13 @@ export default function ServiceCard({ service }) {
     if (formUrl) {
       setShowForm(true);
     } else if (link) {
-      const target = document.querySelector(link);
-      target?.scrollIntoView({ behavior: "smooth" });
+      if (link.startsWith("/")) {
+        navigate(link);
+      } else {
+        navigate("/book");
+      }
     } else {
-      scrollToBooking();
+      navigate("/book");
     }
   };
 
@@ -69,22 +75,18 @@ export default function ServiceCard({ service }) {
       <button
         type="button"
         onClick={handleClick}
-        className="service-card soft-panel group relative flex w-full min-h-[120px] flex-col items-center justify-center p-5 text-center text-sm font-medium text-slate-800 transition hover:border-brand-sky/50 hover:shadow-boutique"
+        className="service-card soft-panel group relative flex min-h-[120px] w-full flex-col items-center justify-center p-5 text-center text-sm font-medium text-slate-800 transition hover:border-brand-sky/50 hover:shadow-boutique"
       >
         <span className="relative z-10 transition group-hover:opacity-0">{title}</span>
         <span className="service-card-hover absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-3xl bg-brand-sky/90 p-5 text-center opacity-0 transition group-hover:opacity-100">
-          {description ? (
-            <span className="text-sm leading-6 text-slate-900">{description}</span>
-          ) : null}
+          {description ? <span className="text-sm leading-6 text-slate-900">{description}</span> : null}
           <span className="inline-block rounded-full bg-white/80 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-800 shadow-sm">
             {formUrl ? "Click to fill enquiry form →" : link ? "View events →" : "Book an appointment →"}
           </span>
         </span>
       </button>
 
-      {showForm && formUrl ? (
-        <ServiceFormModal service={service} onClose={() => setShowForm(false)} />
-      ) : null}
+      {showForm && formUrl ? <ServiceFormModal service={service} onClose={() => setShowForm(false)} /> : null}
     </>
   );
 }

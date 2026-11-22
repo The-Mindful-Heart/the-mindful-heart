@@ -95,6 +95,22 @@ export function formatEventDate(dateString) {
   });
 }
 
+export function formatBlogShortDate(dateString) {
+  if (!dateString) return "";
+  const parsed = new Date(dateString);
+  if (Number.isNaN(parsed.getTime())) return dateString;
+  return parsed.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
+
+export function normalizeBlogAuthor(author) {
+  if (!author) return { name: "", image: "" };
+  if (typeof author === "string") return { name: author, image: "" };
+  return {
+    name: author.name ?? "",
+    image: author.image ?? "",
+  };
+}
+
 export function scrollToBooking() {
-  document.getElementById("book")?.scrollIntoView({ behavior: "smooth" });
+  window.location.assign("/book");
 }

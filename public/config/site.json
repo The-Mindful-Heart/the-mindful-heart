@@ -4,24 +4,60 @@
     "tagline": "A space to help your mind and heart meet",
     "logo": "/images/logo.png"
   },
+  "loading": {
+    "durationMs": 2000,
+    "gif": "/images/brain-heart-orbit.gif"
+  },
   "hero": {
     "badge": "The Mindful Heart",
     "title": "Clinical psychology",
     "titleAccent": "with depth, warmth, and dignity.",
     "description": "When life feels heavy, confusing, or lonely, therapy can become a steady place to breathe, reflect, and begin again. At The Mindful Heart, we walk alongside adolescents and adults with compassionate, inclusive, and clinically grounded care that helps you reconnect with safety, meaning, and emotional balance.",
-    "backgroundImage": "https://www.simplypsychology.org/wp-content/uploads/Psychotherapy.jpg",
+    "backgroundImage": "/images/hero/psychotherapy.jpg",
     "primaryCta": {
       "label": "Book an Appointment",
-      "href": "#book"
+      "href": "/book"
     },
     "secondaryCta": {
-      "label": "Explore Our Approach",
-      "href": "#about"
+      "label": "Our Story",
+      "href": "/our-story"
     }
   },
   "quote": {
     "text": "The curious paradox is that when I accept myself just as I am, then I can change.",
     "author": "Carl Rogers"
+  },
+  "ourStory": {
+    "title": "How we began",
+    "paragraphs": [
+      "The Mindful Heart grew from a simple conviction: therapy should feel human, accessible, and respectful of each person's pace and context.",
+      "What started as individual clinical work has expanded into workshops, community learning spaces, and collaborative care—with the same relational values at the center."
+    ]
+  },
+  "resources": {
+    "title": "Resources",
+    "description": "Psychoeducational materials and references will live here.",
+    "placeholder": "We are building this section. New resources will be added soon."
+  },
+  "footer": {
+    "copyrightYear": 2026,
+    "social": [
+      {
+        "icon": "instagram",
+        "label": "Connect on Instagram",
+        "href": "https://www.instagram.com/the_mindfulheart/"
+      },
+      {
+        "icon": "linkedin",
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/company/the-mindfulheart/"
+      },
+      {
+        "icon": "google",
+        "label": "Google",
+        "href": "https://share.google/JxYSduwdIjlACy3ve"
+      }
+    ]
   },
   "about": {
     "label": "About Us",
@@ -77,14 +113,11 @@
     ]
   },
   "navigation": [
-    { "label": "About", "href": "#about" },
-    { "label": "Services", "href": "#services" },
-    { "label": "Team", "href": "#team" },
-    { "label": "Gallery", "href": "#videos" },
-    { "label": "Events", "href": "#events" },
-    { "label": "Blogs", "href": "#blogs" },
-    { "label": "Connect on Instagram", "href": "https://www.instagram.com/the_mindfulheart/", "external": true, "icon": "instagram" },
-    { "label": "LinkedIn", "href": "https://www.linkedin.com/company/the-mindfulheart/", "external": true, "icon": "linkedin" },
-    { "label": "Google", "href": "https://share.google/JxYSduwdIjlACy3ve", "external": true, "icon": "google" }
+    { "label": "Our Story", "href": "/our-story" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Team", "href": "/team" },
+    { "label": "Resources", "href": "/resources" },
+    { "label": "Events", "href": "/events" },
+    { "label": "Blogs", "href": "/blogs" }
   ]
 }

@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --header-height: 76px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -21,23 +25,19 @@ body {
 }
 
 .section-label {
-  margin-bottom: 0.75rem;
-  display: inline-block;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #0369a1;
+  @apply inline-block rounded-full bg-sky-100 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.1em] text-sky-900 shadow-sm;
 }
 
-section h2 {
-  display: none;
+.section-title {
+  @apply text-center sm:text-left;
 }
 
-section h2 + p,
-section h2 + div + p {
-  display: none;
+.section-description {
+  @apply mx-auto text-center sm:mx-0 sm:text-left;
+}
+
+.layout-main {
+  scroll-padding-top: var(--header-height);
 }
 
 #goals, #services, #team, #book, #videos, #events, #blogs {
@@ -235,5 +235,92 @@ section {
   }
   to {
     opacity: 1;
+  }
+}
+
+.loading-dance-glow {
+  position: absolute;
+  inset: 8% 12% auto;
+  height: 55%;
+  border-radius: 999px;
+  background: radial-gradient(ellipse at center, rgba(253, 224, 171, 0.75) 0%, rgba(253, 224, 171, 0) 70%);
+  animation: loading-glow-pulse 1.6s ease-in-out infinite;
+}
+
+.loading-dance-brain {
+  transform-origin: 62px 72px;
+  animation: loading-brain-dance 1.1s ease-in-out infinite;
+}
+
+.loading-dance-heart {
+  transform-origin: 162px 72px;
+  animation: loading-heart-dance 1.1s ease-in-out infinite;
+  animation-delay: 0.12s;
+}
+
+.loading-dance-hands {
+  animation: loading-hands-sway 1.1s ease-in-out infinite;
+}
+
+@keyframes loading-brain-dance {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(-4deg);
+  }
+  25% {
+    transform: translate(3px, -5px) rotate(2deg);
+  }
+  50% {
+    transform: translate(6px, -2px) rotate(5deg);
+  }
+  75% {
+    transform: translate(2px, -6px) rotate(0deg);
+  }
+}
+
+@keyframes loading-heart-dance {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(4deg);
+  }
+  25% {
+    transform: translate(-3px, -6px) rotate(-2deg);
+  }
+  50% {
+    transform: translate(-6px, -2px) rotate(-5deg);
+  }
+  75% {
+    transform: translate(-2px, -5px) rotate(-1deg);
+  }
+}
+
+@keyframes loading-hands-sway {
+  0%,
+  100% {
+    stroke: #49b9ff;
+  }
+  50% {
+    stroke: #57e7a5;
+  }
+}
+
+@keyframes loading-glow-pulse {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-dance-brain,
+  .loading-dance-heart,
+  .loading-dance-hands,
+  .loading-dance-glow {
+    animation: none;
   }
 }

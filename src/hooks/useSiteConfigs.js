@@ -42,8 +42,9 @@ export function useSiteConfigs() {
   const team = useConfig("/config/team.json", []);
   const events = useConfig("/config/events.json", { ongoing: [], completed: [] });
   const videos = useConfig("/config/videos.json", { videos: [] });
-  const blogs = useConfig("/config/blogs.json", { posts: [] });
+  const blogs = useConfig("/config/blogs.json", { posts: [], categories: [{ id: "all", label: "All Posts" }] });
   const disclaimer = useConfig("/config/disclaimer.json", {});
+  const faq = useConfig("/config/faq.json", { categories: [] });
 
   const loading =
     site.loading ||
@@ -52,7 +53,8 @@ export function useSiteConfigs() {
     events.loading ||
     videos.loading ||
     blogs.loading ||
-    disclaimer.loading;
+    disclaimer.loading ||
+    faq.loading;
 
-  return { site, services, team, events, videos, blogs, disclaimer, loading };
+  return { site, services, team, events, videos, blogs, disclaimer, faq, loading };
 }

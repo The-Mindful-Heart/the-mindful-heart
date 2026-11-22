@@ -1,5 +1,6 @@
 [
   {
+    "slug": "srinidhi-c-v",
     "name": "Srinidhi C.V",
     "role": "Founder | Clinical Psychologist | Psychotherapist",
     "focus": "Anxiety, depression, OCD, addiction, grief, relationship concerns, and neurorehabilitation.",
@@ -12,6 +13,7 @@
     ]
   },
   {
+    "slug": "kalaivani-kumar",
     "name": "Kalaivani Kumar",
     "role": "Senior Psychologist | Psychotherapist",
     "focus": "Clinical psychotherapy, child intervention, parental counselling, and inclusive mental health outreach.",
@@ -24,6 +26,7 @@
     ]
   },
   {
+    "slug": "subha-joshi",
     "name": "Subha Joshi",
     "role": "Counselling Psychologist | Psychotherapist",
     "focus": "Adolescents and young adults; trauma-informed and integrative psychotherapy.",
@@ -36,6 +39,7 @@
     ]
   },
   {
+    "slug": "cauviya-ravichandran",
     "name": "Cauviya Ravichandran",
     "role": "Consultant Counseling Psychologist",
     "focus": "Life transitions, relationship dynamics, emotional wellbeing, and youth mental health support.",
@@ -48,6 +52,7 @@
     ]
   },
   {
+    "slug": "gopi-krishna",
     "name": "Gopi Krishna",
     "role": "Senior Psychologist | Psychotherapist",
     "focus": "Stress, anxiety, relationships, interpersonal difficulties, attachment issues, emotional regulation, self-esteem, life transitions, and personal growth.",
