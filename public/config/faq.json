@@ -37,7 +37,12 @@
         },
         {
           "question": "How do I know if a therapist is the right fit for me?",
-          "answer": "There’s no one answer for that. Ask yourself what “right fit” means for you—a therapist who gets you or makes you feel safe. It usually takes a few sessions to build rapport. Check in with your experience over the first few sessions to see if it feels like a good match."
+          "answerPrefix": "There’s no one answer for that. Ask yourself what “right fit” means for you—a therapist who gets you or makes you feel safe. It usually takes a few sessions to build rapport. Check in with your experience over the first few sessions to see if it feels like a good match. You may also find our ",
+          "link": {
+            "href": "/blogs/how-to-find-the-right-therapist",
+            "label": "guide to finding the right therapist"
+          },
+          "answerSuffix": " helpful."
         },
         {
           "question": "Can I attend therapy in my preferred language?",
@@ -124,7 +129,13 @@
       "items": [
         {
           "question": "How do I apply for an internship at The Mindful Heart?",
-          "answer": "You can reach out to us at Srinidhi.themindfulheart@gmail.com for more details, or submit an enquiry through our internship form on the Services page."
+          "answerPrefix": "You can reach out to us at Srinidhi.themindfulheart@gmail.com for more details, or submit an enquiry through our ",
+          "link": {
+            "href": "https://docs.google.com/forms/d/e/1FAIpQLSeXOnMDgAfKeAmj-uQI4rPQSI__nReXxlYLkEX4HtRmRoeidQ/viewform",
+            "label": "internship enquiry form",
+            "external": true
+          },
+          "answerSuffix": ". Someone from our team will get back to you."
         },
         {
           "question": "Who is eligible to apply for the internship?",

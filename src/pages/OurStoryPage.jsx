@@ -20,6 +20,32 @@ export default function OurStoryPage() {
               <p key={paragraph.slice(0, 40)}>{paragraph}</p>
             ))}
           </div>
+          {about.brochure?.file ? (
+            <div className="mt-8 border-t border-slate-200/60 pt-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Download</p>
+              <p className="mt-2 font-heading text-lg text-slate-900">{about.brochure.title ?? "Brochure"}</p>
+              {about.brochure.summary ? (
+                <p className="mt-2 text-sm leading-7 text-slate-600">{about.brochure.summary}</p>
+              ) : null}
+              <div className="mt-4 flex flex-wrap gap-3">
+                <a
+                  href={about.brochure.file}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cta-primary px-5 py-2.5"
+                >
+                  View PDF
+                </a>
+                <a
+                  href={about.brochure.file}
+                  download
+                  className="rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-brand-sky hover:text-sky-800"
+                >
+                  Download
+                </a>
+              </div>
+            </div>
+          ) : null}
         </div>
         <div className="space-y-4">
           {impactStats.map((stat) => (

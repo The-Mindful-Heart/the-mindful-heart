@@ -82,6 +82,33 @@ export default function EventDetailPage() {
             </div>
           ) : null}
 
+          {event.brochure?.file ? (
+            <div className="mt-10 border-t border-slate-200/60 pt-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Download</p>
+              <p className="mt-2 font-heading text-lg text-slate-900">{event.brochure.title ?? "Event brochure"}</p>
+              {event.brochure.summary ? (
+                <p className="mt-2 text-sm leading-7 text-slate-600">{event.brochure.summary}</p>
+              ) : null}
+              <div className="mt-4 flex flex-wrap gap-3">
+                <a
+                  href={event.brochure.file}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cta-primary px-5 py-2.5"
+                >
+                  View PDF
+                </a>
+                <a
+                  href={event.brochure.file}
+                  download
+                  className="rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-brand-sky hover:text-sky-800"
+                >
+                  Download
+                </a>
+              </div>
+            </div>
+          ) : null}
+
           {upcoming && formUrl ? (
             <div className="mt-10 flex justify-center border-t border-slate-200/60 pt-8">
               <button type="button" onClick={() => setShowRegister(true)} className="cta-primary px-8 py-3">

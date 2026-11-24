@@ -36,8 +36,16 @@
   },
   "resources": {
     "title": "Resources",
-    "description": "Psychoeducational materials and references will live here.",
-    "placeholder": "We are building this section. New resources will be added soon."
+    "description": "Downloadable handouts and psychoeducational materials from The Mindful Heart.",
+    "items": [
+      {
+        "id": "loving-things-to-tell-yourself",
+        "title": "Loving Things to Tell Yourself",
+        "summary": "A gentle handout of affirming phrases you can return to when self-talk turns harsh.",
+        "file": "/pdfs/loving-things-to-tell-yourself-handout.pdf",
+        "type": "pdf"
+      }
+    ]
   },
   "footer": {
     "copyrightYear": 2026,
@@ -66,7 +74,12 @@
       "The Mindful Heart is a psychotherapy practice committed to making mental health support accessible, humane, and deeply respectful of each person's story. We work with adolescents and adults through relational, trauma-informed, and evidence-based care.",
       "Our approach reflects a blend of clinical depth and human warmth. We focus not only on symptoms, but also on the lived context behind them — relationships, life transitions, identity, grief, and the courage required to heal.",
       "We believe therapy is a collaborative journey where people can feel seen without judgment and supported toward meaningful change."
-    ]
+    ],
+    "brochure": {
+      "title": "Practice brochure",
+      "summary": "Download our overview of services, values, and how we work with clients.",
+      "file": "/pdfs/the-mindful-heart-brochure.pdf"
+    }
   },
   "impactStats": [
     { "value": "Inclusive", "label": "Affirmative and stigma-free practice" },

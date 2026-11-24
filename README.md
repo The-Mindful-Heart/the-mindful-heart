@@ -153,7 +153,7 @@ Edit `public/config/disclaimer.json` to update the non-emergency notice and help
 
 ## Deployment
 
-The site is static-output friendly and optimized for deployment on Cloudflare Pages.
+The site is a static Vite build. **Production (themindfulheart.in) is on Vercel** — `vercel.json` rewrites all routes to `index.html` for client-side routing. `public/_redirects` is for Cloudflare Pages if you deploy there instead.
 
 ## Routes
 
@@ -171,7 +171,7 @@ The site is static-output friendly and optimized for deployment on Cloudflare Pa
 | `/blogs/:slug` | Shareable post (`id` or optional `slug` in config) |
 | `/book` | Appointment booking form |
 
-SPA hosting must serve `index.html` for all paths (see `public/_redirects` for Cloudflare Pages).
+SPA hosting must serve `index.html` for all paths (`vercel.json` on Vercel, `public/_redirects` on Cloudflare Pages).
 
 Team profile URLs use `slug` from `public/config/team.json` (e.g. `/team/kalaivani-kumar`).
 

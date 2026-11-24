@@ -19,6 +19,11 @@
       "template": "media",
       "poster": "/images/events/internship-program.jpg",
       "image": "/images/events/internship-program.jpg",
+      "brochure": {
+        "title": "Internship brochure",
+        "summary": "Program structure, eligibility, fees, and how to apply.",
+        "file": "/pdfs/internship-brochure.pdf"
+      },
       "videos": [
         {
           "title": "Internship Program Details",
@@ -27,32 +32,56 @@
       ],
       "ctaLabel": "DM for Registration",
       "ctaUrl": "https://www.instagram.com/the_mindfulheart/"
+    }
+  ],
+  "completed": [
+    {
+      "id": "tmh-space-hard-launch",
+      "slug": "physical-space-hard-launch",
+      "title": "Hard Launch — The Mindful Heart Physical Space",
+      "date": "2026-11-23",
+      "time": "",
+      "mode": "In Person",
+      "location": "Arumbakkam, Chennai",
+      "summary": "A warm celebration with fellow therapists to mark the opening of our Arumbakkam space — games, laughter, handmade return gifts, and gratitude for the journey ahead.",
+      "description": "A lotta thought, effort, and so much love went into planning the hard launch of The Mindful Heart’s physical space.\n\nFor us, this isn’t just a new space. It’s a little corner we’ve created with the hope that every soul who walks through our doors feels safe, heard, and welcome. So, naturally, we wanted to celebrate this first step with people who believe in creating spaces like these too.\n\nWe invited some of our fellow therapists to join us for this little celebration, and we’re incredibly grateful to everyone who took the time to be there. Having people who understand the heart behind what we’re building come together and celebrate with us made the day all the more special.\n\nThe day was simple and warm. We played a few games, shared snacks and laughter, and spent some much-needed time together outside of our usual therapist selves. We ended the day with warm handshakes, heartfelt conversations, and that slightly emotional feeling of “okay, we really did this.”And, of course, we couldn’t let everyone leave without a little something from us.\n\nAs a small thank-you for being a part of this milestone, we put together handmade return gifts. Nothing too fancy. Just little reminders of the space we’re trying to create. One that encourages you to pause, breathe, grow, and take care of yourself.\n\nWe are looking forward to the doors we’ve finally opened, the conversations that will happen within them, the people we’ll meet, and all the little moments that will slowly make this space what we’ve imagined it to be.\n\nWe’re so, so grateful to begin this journey.",
+      "poster": "/images/events/mindful-heart-space-launch.jpg",
+      "image": "/images/events/mindful-heart-space-launch.jpg",
+      "gallery": {
+        "images": [
+          "/images/events/physical-space-hard-launch/launch-celebration.jpeg"
+        ]
+      },
+      "videos": [],
+      "ctaLabel": "",
+      "ctaUrl": ""
     },
     {
       "id": "tmh-therapists-talk",
       "slug": "therapists-talk",
       "title": "Therapists Talk — A Safe Space For and By Therapists",
-      "date": "2026-12-12",
+      "date": "2025-11-15",
       "time": "2:30 PM - 4:30 PM IST",
       "mode": "Online",
       "location": "Zoom",
-      "summary": "An online peer space for therapists every 2nd and 4th Saturday — bring your therapy experience, explore fit, then agree on a payment plan.",
-      "description": "A safe space for and by therapists.\n\nJoin us every 2nd and 4th Saturday from 2:30-4:30pm online, and bring in everything and anything related to your therapy experience! Take the first two Saturdays to figure if the space is for you, and then we'll discuss a payment plan.",
-      "registrationFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLScc_2_J036y7LkwTtWIyOrFsszfZZDpM9IZPCBuP59oQkpyvw/viewform?embedded=true",
-      "template": "media",
+      "summary": "A peer space for therapists to share experiences, doubts, wins, and the parts of this work we rarely say out loud — with sessions held online.",
+      "description": "The Mindful Heart was created as a space that supports not just our clients, but also the people who spend so much of their time holding space for others.\n\nWe wanted to create a little corner where our fellow therapists could come together and talk about the things that come with being a therapist. The experiences, the doubts, the struggles, the little wins, the accomplishments, the things we don’t always get to say out loud, and honestly, just about anything that comes with doing this work.\n\nAnd that’s how Therapists Talk came to be.\n\nWe created this space with the hope of being able to help, support, or simply hold space for some of the fellow therapists we’ve been lucky enough to come across. We weren’t quite sure what kind of response to expect, so seeing the number of therapists who reached out and wanted to be a part of it honestly meant more to us than we can put into words. There was a little moment of “oh, so we’re not the only ones who thought this was needed.” The response gave us an assurance we didn’t know we needed. We’ve been successfully conducting Therapists Talk online, and it was such a lovely experience getting to meet new therapists, listen to their experiences, exchange thoughts, and share our own perspectives wherever we could. We may not always have the perfect answer, but sometimes, having someone say “I’ve been there too” can be enough.\n\nFor now, Therapists Talk is online, but we’re excited to see where this little space goes from here.\n\nWe’re incredibly proud of the little space we’ve created, one that we hope can offer strength and support to those who spend their days nurturing and nourishing the minds and hearts of others.",
       "poster": "/images/events/therapists-talk.jpg",
       "image": "/images/events/therapists-talk.jpg",
+      "brochure": {
+        "title": "Therapists Talk brochure",
+        "summary": "Overview of the space, format, and how to join.",
+        "file": "/pdfs/therapists-talk-brochure.pdf"
+      },
       "videos": [
         {
           "title": "Therapists Talk",
           "url": "https://www.instagram.com/reel/DaAn4WTp0u2/"
         }
       ],
-      "ctaLabel": "DM for Link",
-      "ctaUrl": "https://www.instagram.com/the_mindfulheart/"
-    }
-  ],
-  "completed": [
+      "ctaLabel": "",
+      "ctaUrl": ""
+    },
     {
       "id": "tmh-past-04",
       "slug": "me-my-vulnerable-self-and-i",
@@ -61,8 +90,8 @@
       "time": "10:00 AM IST",
       "mode": "In Person",
       "location": "Chennai",
-      "summary": "A workshop on embracing vulnerability as strength, facilitated by Srinidhi Vasudevan and Preethi.",
-      "description": "Me, My (vulnerable)self and I was a pure success. Our workshop was full of insights and allowed ourselves to embrace our vulnerable selves.\n\nFacilitated by Srinidhi Vasudevan and Preethi, the session created a safe space for participants to explore their vulnerability as a source of strength and self-awareness.",
+      "summary": "An experiential workshop on understanding, holding, and embracing our vulnerable selves — facilitated by Srinidhi Vasudevan and Kalaivani.",
+      "description": "Me, My Vulnerable Self and I\n\nAn Experiential Psychology Workshop on Understanding, Holding and Embracing Our Vulnerable Selves, facilitated by Srinidhi and Kalaivani. On April 06, 2025, the mindful heart created an experiential space for individuals to pause, look within, and connect with a part of themselves that is often hidden, protected, criticised, or ignored—their vulnerable self.\n\n“Me, My Vulnerable Self and I” was designed as more than a psychology workshop. It was a space to experience, explore, reflect, move, express and connect. Rather than sitting through lectures and being told what vulnerability, self-love or overthinking means, participants were invited to personally experience these concepts through thoughtfully designed activities, discussions and movements.\n\nCreating Space for the Vulnerable SelfMost of us have learned to protect ourselves.\n\nWe hide our insecurities behind confidence. This workshop aimed to create a safe and reflective environment where participants could begin to look at their vulnerable selves with greater curiosity and compassion. Instead of asking, “Why am I like this?” participants were encouraged to explore deeper questions such as: What experiences shaped this insecurity?\n\nWhat triggers this reaction in me?\n\nWhat am I really afraid of beneath my overthinking?\n\nWhat does this vulnerable part of me actually need?\n\nThe intention was not to “fix” vulnerability, but to embrace and build a healthier relationship with it.\n\nUnderstanding Insecurity and Its TriggersOne of the important experiences within the workshop focused on understanding insecurity triggers and their possible roots.\n\nInsecurities do not usually appear without a story. They can be shaped by experiences of criticism, rejection, comparison, unmet emotional needs, relationships, failures, expectations and many other life experiences. Participants were guided through reflective and activity-based experiences that helped them break down their personal insecurity patterns.\n\nBreaking Out of the Overthinking CycleThe aim was not to eliminate thinking, but to develop greater awareness of when thinking becomes a cycle that disconnects us from the present moment.\n\nThrough activity-based learning, participants were invited to observe their own patterns and experience the difference between being caught inside a thought cycle and stepping outside it. Instead of simply discussing strategies for overthinking, the workshop focused on experiential learning—helping participants notice what happens internally when the mind repeatedly moves in circles.\n\nExperiencing Self-Love Beyond WordsThis workshop approached self-love as an experience rather than an instruction.\n\nThrough reflection, activities and shared experiences, participants were encouraged to explore how they relate to themselves—especially during moments of insecurity, failure.\n\n“I may not have everything figured out, but I can still be on my own side.”Sometimes self-love means appreciating ourselves. Sometimes it means forgiving ourselves. Sometimes it means resting. Sometimes it means setting boundaries. And sometimes, self-love simply means sitting beside the parts of ourselves that we usually reject.\n\nNo Lectures—Only Experience, Discussion and MovementOne of the defining aspects of “Me, My Vulnerable Self and I” was its experiential format.\n\nThere were no conventional lectures where participants were expected to simply listen and take notes. Instead, the space was built around: Activity-based learning, Guided self-reflection, Meaningful discussions, Personal exploration, Experiential exercises, Movement and expression, Shared learning, Moments of pause and connection. The experiential approach allowed participants to engage with psychological concepts in a more personal and meaningful way.\n\nA Safe Space to Be HumanThe workshop was ultimately about creating space to acknowledge insecurities without shame, to recognise that overthinking may sometimes be an attempt to feel safe, to understand that vulnerability is not something that needs to be hidden, to connect with ourselves beyond the roles we perform for others and to remember that being vulnerable does not mean being weak.\n\nOur vulnerable self is often the part of us that carries our fears, unmet needs, hopes and deepest emotional experiences. When we constantly silence or reject this part, we may become disconnected from ourselves.\n\nBut when we begin to approach it with curiosity and compassion, something can slowly shift. We may not become fearless. But perhaps we become less afraid of ourselves.\n\nMore Than a Workshop“Me, My Vulnerable Self and I” was not designed to provide participants with a perfect formula for confidence, self-love or emotional wellbeing. Instead, it offered an opportunity to pause and begin a conversation with oneself.\n\nAlong with meaningful experiences and reflections, participants also received takeaway goodies—small reminders from the workshop to carry a piece of the experience beyond the space itself. Because the journey does not end when a workshop ends. The insights we gain may continue to return to us in quiet moments. “Me, My Vulnerable Self and I” was an invitation to create a safe space for the most—is the vulnerable version of ourselves that has been waiting to be heard all along.",
       "template": "featured",
       "poster": "/images/events/me-my-vulnerable-self-and-i.jpg",
       "image": "/images/events/me-my-vulnerable-self-and-i.jpg",
@@ -72,6 +101,85 @@
           "url": "https://www.instagram.com/reel/DMF4LslSW8i/"
         }
       ],
+      "ctaLabel": "",
+      "ctaUrl": "",
+      "gallery": {
+        "images": [
+          "/images/events/me-my-vulnerable-self-and-i/wa0004.jpg",
+          "/images/events/me-my-vulnerable-self-and-i/wa0005.jpg",
+          "/images/events/me-my-vulnerable-self-and-i/wa0006.jpg"
+        ]
+      }
+    },
+    {
+      "id": "tmh-rowdhiram-pazhagu",
+      "slug": "rowdhiram-pazhagu",
+      "title": "Rowthiram Pazhagu — Express Anger in a Healthy Way",
+      "date": "2025-12-07",
+      "time": "4 hours",
+      "mode": "In Person",
+      "location": "Chennai",
+      "summary": "A four-hour experiential workshop on embracing righteous anger and expressing it safely — without suppressing yourself or hurting others.",
+      "description": "On December 7, 2025, The Mindful Heart conducted “Rowthiram Pazhagu”, a four-hour experiential psychology workshop designed to help us embrace our righteous anger and express it in a healthy way.\n\nAnger is often given two extreme responses. We are either taught to control it, suppress it and calm down, or we express it in ways that may hurt ourselves and the people around us. But what if anger itself is not the problem? What if anger is trying to tell us something?\n\nRowthiram Pazhagu, meaning “Righteous anger,” was created as a space to help participants explore anger differently—not as an emotion that needs to be feared or constantly controlled, but as an emotion that can be understood, experienced and expressed in healthier ways.\n\nThe workshop offered participants a cathartic and experiential space to reconnect with their anger, understand what lies beneath it and discover ways of communicating it without suppressing themselves or harming others.\n\nThe goal, is not necessarily to become a person who never gets angry. The question is: Can we learn to understand our anger before it takes control of us? Can we learn to express anger without abandoning ourselves or hurting others?\n\nThese questions formed the heart of Rowthiram Pazhagu.\n\nBreaking Down Anger and Understanding Its Role:One of the central explorations of the workshop was understanding what anger really is and the role it plays in our emotional lives. Anger is often the emotion that people see. But it is not always the first emotion that we feel. Sometimes, beneath anger, there may be Hurt, Fear, Rejection, Disappointment, Helplessness, Shame, Loneliness, Feeling unheard, Feeling disrespected, Feeling powerless.\n\nWhen someone says, “I'm angry that you ignored me,” there may also be an underlying experience of: “I felt unimportant to you.”When someone becomes angry after being criticised, the anger may be protecting a deeper feeling of: “I feel hurt and inadequate.”\n\nAnger Does Not Always Need to Be Controlled:One of the important ideas explored during Rowthiram Pazhagu was the difference between controlling anger and learning to experience anger safely.\n\nThe workshop created opportunities for participants to experience and acknowledge anger in a psychologically safe and contained space. The intention was not to encourage uncontrolled aggression, but to feel anger fully while still taking responsibility for how we act.\n\nLooking Deeper into Anger:Anger can often feel immediate. Someone says something. Something unfair happens. A boundary is crossed. And suddenly, we react. However, the intensity of anger can sometimes carry a deeper personal meaning. The workshop encouraged participants to pause and look beneath the surface of their reactions.\n\nLooking deeper into anger does not mean overanalysing every emotion. Instead, it means developing emotional curiosity. When we understand the deeper story behind our anger, we become more capable of choosing how we want to respond.\n\nLearning to Communicate Anger Healthily:Anger becomes particularly difficult when we do not know how to communicate it. Some people remain silent until the anger builds up. Others become sarcastic or passive-aggressive. Some withdraw completely. Others explode.\n\nHealthy anger communication does not mean speaking softly all the time. It also does not mean hiding our intensity to make other people comfortable. Instead, it involves learning to communicate what has affected us with greater awareness. Rowthiram Pazhagu included activity-based learning experiences that helped participants explore healthier ways of communicating anger.\n\nForgiving Self and Others: Releasing What Anger HoldsAnother important segment of Rowthiram Pazhagu explored forgiving oneself and others.\n\nSometimes, anger remains long after the situation has passed. We may continue holding anger towards someone for what they did, or towards ourselves for what we did, tolerated or failed to do. Over time, this unresolved anger can turn into resentment, guilt, shame or emotional heaviness.\n\nForgiveness does not mean saying that what happened was acceptable. It does not mean forgetting, reconnecting with someone, or allowing the same hurt to happen again. Instead, forgiveness can be a process of choosing not to let the pain continue to hold the same emotional power over us. Sometimes, resolving anger involves forgiving another person. And sometimes, the harder forgiveness is forgiving ourselves—for the mistakes we made, the choices we regret, or for not knowing then what we know now. Through reflection and experiential learning, participants explored the possibility of releasing anger while still honouring their experiences and maintaining necessary boundaries.\n\nForgiveness may not erase what happened, but it can help us stop carrying it everywhere we go.\n\nLearning Through Experience, Not Lectures:Rowthiram Pazhagu was designed as an experiential psychology workshop.\n\nThere were no conventional lectures where participants were expected to sit and passively absorb information. Instead, learning happened through:  Experiential activities, Emotional exploration, Reflection, Group discussions, Shared insights, Personal observations, Communication exercises, Cathartic experiences.\n\nAn Open and Non-Judgemental Space:Talking about anger can feel uncomfortable.\n\nWe may fear being judged, we may feel guilty about things we have said when angry, we may feel ashamed of how much anger we carry, we may even be afraid to acknowledge that we are angry with people we love. For this reason, creating a non-judgemental space was an essential part of the workshop.\n\nParticipants were encouraged to engage in open discussions and reflections without the expectation that they needed to have perfect emotional responses.\n\nThe space recognised a simple truth:Being human means experiencing emotions that are sometimes messy, intense and difficult to understand. The purpose was not to label participants as “angry people” or “calm people.” Instead, it was to create space for curiosity.\n\nTakeaways Beyond the WorkshopThe four-hour experience was designed to offer participants insights and experiences that could continue beyond the workshop space.\n\nParticipants also received takeaway goodies, serving as small reminders of their journey through anger, expression and self-understanding. The workshop may have ended in four hours, but the conversations it opened can continue in everyday life.\n\nA Final ReflectionAnger is not always asking to be controlled. Sometimes, it is asking to be heard. Sometimes, underneath “I'm angry,” there is: “I am hurt.” “I feel unseen.” “I feel powerless.” “I deserved better.” “Something important to me has been crossed.”When we learn to listen to our anger, we may discover that it is not always an enemy within us. Sometimes, it is a messenger.\n\nRowthiram Pazhagu, was an invitation to meet that messenger with greater awareness, honesty and compassion. To feel without shame, to express without destruction, to communicate without abandoning ourselves.",
+      "template": "featured",
+      "poster": "/images/events/rowdhiram-pazhagu.jpg",
+      "image": "/images/events/rowdhiram-pazhagu.jpg",
+      "brochure": {
+        "title": "Rowthiram Pazhagu poster",
+        "summary": "Workshop overview and themes.",
+        "file": "/pdfs/rowthiram-pazhagu-poster.pdf"
+      },
+      "videos": [],
+      "ctaLabel": "",
+      "ctaUrl": ""
+    },
+    {
+      "id": "tmh-queer-kalainayam",
+      "slug": "queer-kalainayam",
+      "title": "Queer Kalainayam — Reflective Film Screening",
+      "date": "2026-08-09",
+      "time": "",
+      "mode": "In Person",
+      "location": "Arumbakkam, Chennai",
+      "summary": "A joint screening series with Queer Azhaigal — queer films, art, and conversations on identity at The Mindful Heart space.",
+      "description": "Queer kalainayam is a reflective movie screening series, joint venture of The Mindful Heart with Queer Azhaigal, a queer centered illustrator in Instagram that happened in our physical space on 09.08.26. A gathering where we savour queer films, enjoy creating art, hold space for conversations and somewhere amidst all of this, understand identities. On 9th Aug, the movie “Memories in March” directed by Sanjoy Nag was screened. It is a film about a grieving mother discovering various dimensions of her son. Themes around grief, relationships and the struggle of acceptance among parents were discussed post an art based reflective activity. Participants enjoyed having a space to share, belong and hold conversations.",
+      "poster": "/images/events/queer-kalainayam.jpg",
+      "image": "/images/events/queer-kalainayam.jpg",
+      "gallery": {
+        "images": [
+          "/images/events/queer-kalainayam/screening.jpg"
+        ]
+      },
+      "videos": [],
+      "ctaLabel": "",
+      "ctaUrl": ""
+    },
+    {
+      "id": "tmh-wall-of-hope",
+      "slug": "wall-of-hope",
+      "title": "Wall of Hope — Youth Mental Wellness",
+      "date": "2026-11-24",
+      "time": "",
+      "mode": "In Person",
+      "location": "Chennai",
+      "summary": "The Mindful Heart hosted a hope-centered stall with SCARF India’s Youth Mental Health campaign — clay, balance, postcards, and a public playlist of songs that bring hope.",
+      "description": "Wall of Hope was an amazing event that showcased the efforts and campaign for Youth Mental Wellness centering around Suicide Prevention by The Department of Youth Mental Health (YMH) at SCARF India (Schizophrenia Research Foundation) in Chennai. The Mindful Heart hosted a Hope centered stall. After a quick feelings check-in, we asked people to create and show what form \"Hope\" takes for them using clay. There was a lot of fun, laughter and some deeper reflections in the process. After that participants are invited to look at how holding on to hope is a balancing act between the parts of us that give strength and the parts of us that protect and warn us by placing metaphorical rocks on balance scales.\n\nWhile threatening ominous messages have a sense of foreboding and doom, we extended the concept of balance by holding ominousness with positivity and gave away postcards featuring such messages to participants. And as a final shared experience, asked people to write down songs that brought them Hope in the toughest times and created a Public Playlist.\n\nScan the QR to access and listen to it!",
+      "poster": "/images/events/wall-of-hope.jpg",
+      "image": "/images/events/wall-of-hope.jpg",
+      "gallery": {
+        "images": [
+          "/images/events/wall-of-hope/wa0033.jpg",
+          "/images/events/wall-of-hope/wa0036.jpg",
+          "/images/events/wall-of-hope/wa0038.jpg",
+          "/images/events/wall-of-hope/wa0042.jpg",
+          "/images/events/wall-of-hope/wa0045.jpg",
+          "/images/events/wall-of-hope/wa0048.jpg",
+          "/images/events/wall-of-hope/balancing.png",
+          "/images/events/wall-of-hope/hope-07.png",
+          "/images/events/wall-of-hope/song-and-hope.png"
+        ]
+      },
+      "videos": [],
       "ctaLabel": "",
       "ctaUrl": ""
     }

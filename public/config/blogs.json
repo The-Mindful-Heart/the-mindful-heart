@@ -1,7 +1,7 @@
 {
   "title": "Blogs & Resources",
   "breadcrumbLabel": "Blogs",
-  "description": "Articles and reflections from The Mindful Heart team. Add posts in this file and place HTML or PDF files in public/blogs/.",
+  "description": "Articles and reflections from The Mindful Heart team.",
   "navigation": {
     "showSearch": true,
     "maxPrimaryTabs": 5
@@ -16,6 +16,22 @@
   ],
   "posts": [
     {
+      "id": "football-at-2am-morning-walk-motivation",
+      "title": "Football at 2 AM? No Problem. A Morning Walk at 6 AM? Maybe tomorrow.",
+      "summary": "Why late-night football feels easy but a morning walk can feel hard — and what motivation, effort, and reward tell us about self-care.",
+      "date": "2026-09-03",
+      "readTimeMinutes": 8,
+      "category": "therapist-pov",
+      "coverImage": "/images/blogs/reflections-therapist-in-making.jpg",
+      "author": {
+        "name": "Gopi Krishna",
+        "image": "/images/team/gopi.png"
+      },
+      "file": "/blogs/football-at-2am-morning-walk-motivation.html",
+      "type": "html",
+      "stats": { "views": 0, "comments": 0, "likes": 0 }
+    },
+    {
       "id": "how-to-find-the-right-therapist",
       "title": "How to Find the Right Therapist",
       "summary": "A guide covering qualifications, expertise, therapeutic approaches, and how to choose a therapist who fits your needs.",
@@ -24,44 +40,12 @@
       "category": "therapy-101",
       "coverImage": "/images/blogs/how-to-find-the-right-therapist.jpg",
       "author": {
-        "name": "The Mindful Heart Team",
-        "image": "/images/logo.png"
+        "name": "Subha Joshi",
+        "image": "/images/team/subha.png"
       },
       "file": "/blogs/how-to-find-a-right-therapist.html",
       "type": "html",
       "stats": { "views": 48, "comments": 0, "likes": 5 }
-    },
-    {
-      "id": "understanding-anxiety",
-      "title": "Understanding Anxiety: A Gentle Guide",
-      "summary": "What anxiety is, how it shows up in the body, and practical ways to begin working with it.",
-      "date": "2026-04-15",
-      "readTimeMinutes": 4,
-      "category": "just-fyi",
-      "coverImage": "/images/blogs/understanding-anxiety.jpg",
-      "author": {
-        "name": "Srinidhi C.V",
-        "image": "/images/team/srinidhi.png"
-      },
-      "file": "/blogs/understanding-anxiety.html",
-      "type": "html",
-      "stats": { "views": 22, "comments": 0, "likes": 2 }
-    },
-    {
-      "id": "reflections-therapist-in-making",
-      "title": "Reflections of a Therapist in the Making",
-      "summary": "Learning, uncertainty, and growth—from the perspective of someone early in their therapeutic journey.",
-      "date": "2026-03-12",
-      "readTimeMinutes": 3,
-      "category": "therapist-pov",
-      "coverImage": "/images/blogs/reflections-therapist-in-making.jpg",
-      "author": {
-        "name": "Subha Joshi",
-        "image": "/images/team/subha.png"
-      },
-      "file": "/blogs/understanding-anxiety.html",
-      "type": "html",
-      "stats": { "views": 15, "comments": 0, "likes": 1 }
     }
   ]
 }
